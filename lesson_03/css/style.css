@@ -1,0 +1,48 @@
+@import url("reset.css");
+
+* {
+	color: rgb(42, 121, 218);
+}
+.title ~ p {
+	color: rgb(50, 241, 50);
+}
+h1, .subtitle {
+	color: rgb(237, 23, 23);
+}
+.list a {
+	color: blue;
+}
+.list .item a {
+	color: rgb(133, 169, 231);
+}
+.info {
+	color: aqua;
+}
+.info.descr {
+	color: rgb(81, 187, 187);
+}
+span {
+	color: rgb(236, 36, 196);
+}
+.meaning + p {
+	color: aquamarine;
+}
+#flag {
+	color: rgb(136, 21, 113);
+}
+div.grey {
+	color: gray;
+}
+.for-lesson, .green {
+	color: green;
+}
+[class*="number"] {
+	color: rgb(224, 19, 163);
+}
+.footer *{
+	color: rgb(212, 143, 46);
+}
+.footer > div {
+	color: aliceblue;
+}
+
