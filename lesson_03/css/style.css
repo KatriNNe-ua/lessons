@@ -1,48 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:regular,600);
+@import url("fonts.css");
 @import url("reset.css");
-
 * {
-	color: rgb(42, 121, 218);
+  font-family: "Work Sans", sans-serif;
 }
-.title ~ p {
-	color: rgb(50, 241, 50);
+
+.title {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  color: #10e762;
 }
-h1, .subtitle {
-	color: rgb(237, 23, 23);
+.navigation {
+  font-size: 25px;
+  text-align: center;
+  color: #505f98;
 }
-.list a {
-	color: blue;
+.subtitle {
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: red;
+  color: #e76310;
+  text-shadow: 2px 2px 6px rgba(123, 76, 224, 0.644);
 }
-.list .item a {
-	color: rgb(133, 169, 231);
+.item-1 {
+  text-decoration: line-through;
+}
+.item-2 {
+  text-transform: capitalize;
+}
+.item-3 {
+  text-align: right;
+}
+.item-4 {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.item-5 {
+  text-decoration: overline;
+  text-decoration-style: wavy;
+  text-decoration-color: greenyellow ;
+  line-height: 2;
+}
+
+.block-1 {
+  font-family: "Roboto", sans-serif;
+}
+.heading {
+  color: #091133;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.32;
+  letter-spacing: 1px;
+}
+.text {
+  color: #505f98;
+  font-size: 18px;
+  line-height: 1.66;
+}
+
+.block-2 {
+  font-family: "DM Sans", sans-serif;
+}
+.subject {
+  color: #1e1b39;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1.07;
+}
+.desc {
+  color: #474464;
+  font-size: 24px;
+  line-height: 1.75;
+}
+.headline {
+  color: #132238;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.31;
 }
 .info {
-	color: aqua;
+  color: #556070;
+  font-size: 18px;
+  line-height: 1.33.333%;
 }
-.info.descr {
-	color: rgb(81, 187, 187);
-}
-span {
-	color: rgb(236, 36, 196);
-}
-.meaning + p {
-	color: aquamarine;
-}
-#flag {
-	color: rgb(136, 21, 113);
-}
-div.grey {
-	color: gray;
-}
-.for-lesson, .green {
-	color: green;
-}
-[class*="number"] {
-	color: rgb(224, 19, 163);
-}
-.footer *{
-	color: rgb(212, 143, 46);
-}
-.footer > div {
-	color: aliceblue;
-}
-
