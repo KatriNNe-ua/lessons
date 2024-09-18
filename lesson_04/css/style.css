@@ -43,7 +43,7 @@
 .item-5 {
   text-decoration: overline;
   text-decoration-style: wavy;
-  text-decoration-color: greenyellow ;
+  text-decoration-color: greenyellow;
   line-height: 2;
 }
 
@@ -87,4 +87,8 @@
   color: #556070;
   font-size: 18px;
   line-height: 1.33;
+}
+.footer {
+  color: rgb(197, 17, 17);
+  font-size: 20px;
 }
