@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,600,700&display=swap");
+@import url("reset.css");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.heading {
+  color: #091133;
+  font-size: 60px;
+  font-weight: 500;
+  margin-block: 40px;
+  text-align: center;
+  color: rgb(30, 93, 93);
+}
+.introduce {
+  padding-inline: 10px;
+  max-width: 559px;
+}
+.title {
+  color: #091133;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.32;
+  letter-spacing: 1px;
+  margin-block-end: 20px;
+}
+.text {
+  color: #505f98;
+  font-size: 18px;
+  line-height: 1.66;
+  margin-block-end: 69px;
+}
+.text-first {
+  margin-block-end: 15px;
+}
+.button {
+  min-width: 189px;
+  height: 36px;
+  padding-inline: 5px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.62.5;
+  border-radius: 2px;
+}
+.button-dark {
+  background: #111b47;
+  color: #fff;
+  margin-inline-end: 30px;
+}
+.button-light {
+  border: 2px solid #091133;
+}
+
+.design {
+  padding: 160px 5px 120px;
+  max-width: 530px;
+}
+.headline {
+  color: #091133;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.33;
+  margin-bottom: 16px;
+}
+.description {
+  color: #6f7cb2;
+  line-height: 1.62;
+  margin-bottom: 70px;
+}
+.description-first {
+  margin-bottom: 10px;
+}
+.cards {
+  font-size: 0;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.card {
+  width: 50%;
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.card-start {
+  margin-bottom: 30px;
+}
+.img {
+  margin-bottom: 14px;
+}
+.title-card {
+  color: #091133;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.62;
+  margin-bottom: 6px;
+}
+.info {
+  color: #5d6970;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.devices {
+  font-family: "Manrope", sans-serif;
+  background-color: #141414;
+  color: #fff;
+  line-height: 1.5;
+  padding: 40px 0;
+}
+.container {
+  max-width: 1597px;
+  margin: 0 auto;
+}
+.subject {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+.devices-text {
+  color: #999;
+  font-size: 18px;
+  margin-bottom: 80px;
+  max-width: 1297px;
+}
+.devices-cards {
+  margin-left: -15px;
+  margin-right: -15px;
+  font-size: 0;
+}
+.wrapper {
+  width: 33.333%;
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.card-item {
+  padding: 50px;
+  border-radius: 12px;
+  border: 1px solid #1f1f1f;
+  background: linear-gradient(
+      222deg,
+      rgba(229, 0, 0, 0.5) -208.03%,
+      rgba(229, 0, 0, 0) 41.32%
+    ),
+    #0f0f0f;
+}
+.cart-item-start {
+  margin-bottom: 30px;
+}
+.block {
+  min-height: 72px;
+  margin-bottom: 30px;
+}
+.icon {
+  padding: 16px;
+  background-color: #141414;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+.subtitle {
+  display: inline-block;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.card-text {
+  font-size: 18px;
+}
+.footer {
+  padding: 20px;
+}
+/* overflow використано тільки для "відпрацювання" властивостей*/
+.footer-text {
+  overflow: scroll;
+  font-size: 30px;
+}
