@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Epilogue:regular,800&display=swap");
+@import url("reset.css");
+body {
+  font-family: "Manrope", sans-serif;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+.header {
+  background-color: #141414;
+}
+[class*="-container"] {
+  max-width: 1627px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* .header-container,
+.experience-container,
+.flower-container,
+.footer-container {
+  max-width: 1627px;
+  margin: 0 auto;
+  padding: 0 15px;
+} */
+.header-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 65px;
+  color: #fff;
+  line-height: 1.5;
+}
+.experience {
+  text-align: center;
+  line-height: 1.5;
+  background: url("../img/abstract-bg.png") 50% 20% / auto no-repeat,
+    url("../img/dark-bg.png") center 0 / auto 860px repeat-x,
+    #141414 url("../img/experience-bg.png") center 0 / auto 860px repeat-x;
+  padding: 802px 0 15px;
+}
+.experience-title {
+  color: #fff;
+  font-size: 58px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.experience-block {
+  max-width: 1096px;
+  margin: 0 auto;
+}
+.experience-text {
+  color: #999;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+.experience-link {
+  min-width: 251px;
+  min-height: 64px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: #e50000;
+  padding: 15px;
+}
+.experience-link span {
+  background: url("../img/icon.png") left center / 28px no-repeat;
+  padding-left: 30px;
+  vertical-align: middle;
+}
+
+.flower {
+  background-color: #141414;
+  padding: 40px 0;
+  color: transparent;
+  background: #141414 url("../img/flower-bg.png") center center / cover
+    no-repeat fixed;
+}
+.flower-body {
+  text-align: center;
+}
+.flower-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(244, 251, 63, 1) 0%,
+    rgba(241, 12, 12, 1) 100%
+  );
+  margin: 0 auto;
+  border: 5px dotted rgb(242, 238, 22);
+  box-shadow: -10px -10px 5px rgba(217, 232, 9, 0.153);
+}
+
+.flower-item {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  font-size: 0;
+  border: 2px dashed green;
+}
+.flower-item-1 {
+  border-radius: 30% 70% 0% 100% / 30% 100% 0% 70%;
+  background: linear-gradient(
+    90deg,
+    rgba(32, 146, 72, 1) 0%,
+    rgba(128, 253, 29, 1) 50%,
+    rgba(69, 252, 167, 1) 100%
+  );
+}
+.flower-item-2 {
+  border-radius: 70% 30% 100% 0% / 100% 30% 70% 0%;
+  background: linear-gradient(
+    190deg,
+    rgba(128, 180, 58, 1) 0%,
+    rgba(128, 253, 29, 1) 50%,
+    rgba(69, 252, 167, 1) 100%
+  );
+}
+.flower-item-3 {
+  border-radius: 30% 70% 0% 100% / 30% 100% 0% 70%;
+  background: linear-gradient(
+    100deg,
+    rgba(32, 146, 72, 1) 0%,
+    rgba(128, 253, 29, 1) 50%,
+    rgba(69, 252, 167, 1) 100%
+  );
+}
+.flower-item-4 {
+  border-radius: 70% 30% 100% 0% / 100% 30% 70% 0%;
+  background: linear-gradient(
+    250deg,
+    rgba(128, 180, 58, 1) 0%,
+    rgba(128, 253, 29, 1) 50%,
+    rgba(69, 252, 167, 1) 100%
+  );
+}
+
+.flower-vase {
+  margin: 0 auto;
+  width: 300px;
+  height: 100px;
+  border: 5px double red;
+  box-shadow: inset 5px 5px 5px rgb(191, 6, 77),
+    inset -5px -5px 5px rgb(191, 6, 77);
+  border-bottom: 10px solid rgb(55, 11, 8);
+}
+
+.portfolio {
+  font-family: "Epilogue", sans-serif;
+  background-color: #fdf0e9;
+  padding: 30px 0;
+}
+.portfolio-container {
+  max-width: 1203px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.portfolio-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+.portfolio-subtitle {
+  color: #ef6d58;
+  line-height: 2;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.portfolio-title {
+  max-width: 397px;
+  color: #391400;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -1px;
+  margin-bottom: 26px;
+}
+.portfolio-text {
+  max-width: 470px;
+  color: #391400;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+.portfolio-list {
+  color: rgba(57, 20, 0, 0.64);
+  line-height: 2;
+}
+.portfolio-item {
+  background: url("../img/check.png") left center / 32px no-repeat;
+  margin-bottom: 16px;
+  padding-left: 48px;
+}
+.portfolio-item-last {
+  margin-bottom: 0;
+}
+.portfolio-img {
+  margin-left: 171px;
+}
