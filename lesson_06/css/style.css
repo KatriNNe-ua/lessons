@@ -84,6 +84,7 @@ body {
   margin: 0 auto;
   border: 5px dotted rgb(242, 238, 22);
   box-shadow: -10px -10px 5px rgba(217, 232, 9, 0.153);
+  outline: 4px solid rgb(216, 223, 6);
 }
 
 .flower-item {
