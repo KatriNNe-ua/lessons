@@ -6,7 +6,7 @@ body {
 }
 .wrapper {
   min-height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .header {
   background-color: #141414;
@@ -16,14 +16,6 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
-/* .header-container,
-.experience-container,
-.flower-container,
-.footer-container {
-  max-width: 1627px;
-  margin: 0 auto;
-  padding: 0 15px;
-} */
 .header-title {
   text-align: center;
   font-weight: 700;
@@ -198,5 +190,5 @@ body {
   margin-bottom: 0;
 }
 .portfolio-img {
-  margin-left: 169px;
+  margin-left: 1px;
 }
