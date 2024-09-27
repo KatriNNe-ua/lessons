@@ -154,6 +154,7 @@ body {
 .portfolio-block {
   display: inline-block;
   vertical-align: middle;
+  font-size: 0;
 }
 .portfolio-subtitle {
   color: #ef6d58;
@@ -161,6 +162,7 @@ body {
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  font-size: 16px;
 }
 .portfolio-title {
   max-width: 397px;
@@ -181,6 +183,7 @@ body {
 .portfolio-list {
   color: rgba(57, 20, 0, 0.64);
   line-height: 2;
+  font-size: 16px;
 }
 .portfolio-item {
   background: url("../img/check.png") left center / 32px no-repeat;
