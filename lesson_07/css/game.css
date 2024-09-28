@@ -1,0 +1,119 @@
+.game {
+  background: url("../img/water-bg.jpg") center center/cover no-repeat;
+  padding: 40px 0;
+}
+.game-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.game-body {
+  padding: 15px;
+  margin: 0 auto;
+  width: 900px;
+  height: 800px;
+  background-color: rgba(240, 248, 255, 0.237);
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.589);
+}
+.game-title {
+  font-size: 60px;
+  text-align: center;
+  color: aliceblue;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-shadow: 4px 6px 2px rgb(22, 46, 106), 0px 0px 5px rgb(10, 10, 10);
+  margin-bottom: 10px;
+}
+.game-body:hover {
+  background: url("../img/shark.png") 70% center / 300px no-repeat,
+    url("../img/shark.png") left 30%/ 250px no-repeat,
+    url("../img/island.png") 90% bottom / 250px no-repeat,
+    rgba(240, 248, 255, 0.237);
+}
+.item {
+  background: url("../img/tree2.png") center center/cover no-repeat;
+  border: 2px solid rgb(93, 48, 48);
+  cursor: cell;
+  visibility: hidden;
+}
+.game-item {
+  width: 300px;
+  height: 40px;
+  margin: 0 auto;
+  display: block;
+  visibility: visible;
+}
+.game-item-text {
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 25px;
+  color: rgb(6, 23, 6);
+  text-shadow: 0px 0px 3px rgb(235, 238, 245);
+  line-height: 1.5;
+}
+.game-item-2 {
+  width: 30px;
+  height: 200px;
+  margin-left: 285px;
+}
+.game-item-3 {
+  width: 385px;
+  height: 20px;
+  margin-left: 285px;
+}
+.game-item-4 {
+  width: 18px;
+  height: 150px;
+  margin-left: 651px;
+}
+.game-item-5 {
+  width: 600px;
+  height: 15px;
+  margin-left: 70px;
+}
+.game-item-6 {
+  width: 10px;
+  height: 270px;
+  margin-left: 70px;
+}
+.game-item-7 {
+  width: 200px;
+  height: 50px;
+  margin-left: 70px;
+  margin-top: -40px;
+}
+.game-item-7::after {
+  content: " ";
+  width: 200px;
+  height: 100px;
+  padding-left: 550px;
+  margin-top: -90px;
+  background: url("../img/boat.png") center center / auto 100px no-repeat;
+}
+.game-item-8 {
+  border: none;
+  background: url("../img/victory.png") 40% 80% / auto 500px no-repeat;
+  margin-top: -450px;
+  width: 700px;
+  height: 500px;
+  padding-top: 180px;
+  margin-left: 60px;
+}
+.win {
+  font-size: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(206, 13, 13);
+  text-shadow: 0px 0px 3px rgb(21, 40, 85);
+  letter-spacing: 10px;
+}
+.game-item:hover ~ .game-item-2,
+.game-item-2:hover, .game-item-2:hover ~ .game-item-3,
+.game-item-3:hover, .game-item-3:hover ~ .game-item-4,
+.game-item-4:hover, .game-item-4:hover ~ .game-item-5,
+.game-item-5:hover, .game-item-5:hover ~ .game-item-6,
+.game-item-6:hover, .game-item-6:hover ~ .game-item-7,
+.game-item-7:hover, .game-item-7:hover ~ .game-item-8 {
+  visibility: visible;
+}
