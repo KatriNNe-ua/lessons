@@ -184,6 +184,11 @@
   margin-left: 10px;
   background: url("../img/icon-1.png") 0 0 / auto no-repeat;
 }
+.icon-1:hover,
+.icon-2:hover,
+.icon-3:hover {
+	text-decoration: underline;
+}
 .icon-2::after {
   content: "";
   width: 54px;
