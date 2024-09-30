@@ -90,6 +90,13 @@
   padding: 42px 32px 32px 112px;
   background: #f9e5da url("../img/quote.png") 32px 40px / auto no-repeat;
 }
+/* .portfolio-quote::before {
+	content: ".";
+	width: 32px;
+	height: 40px;
+	margin-left: 50px;
+	background:  url("../img/quote.png") 32px 40px / auto no-repeat;
+} */
 
 .portfolio-info > *:last-child {
   margin-bottom: 0px;
@@ -102,20 +109,17 @@
 
 .presentation-card {
   max-width: 542.983px;
-  min-height: 617px;
+  padding: 24px 24px 56px 24px;
   border-radius: 56px;
   background: #f0f0f6;
-  padding-top: 24px;
   margin-bottom: 30px;
   font-weight: 700;
 }
 .presentation-pric {
-  margin: 0 auto;
-  max-width: 494.98px;
-  min-height: 271.17px;
   border-radius: 34px;
   background: #4a3aff;
   padding-top: 44.59px;
+  padding-bottom: 44px;
   color: #fff;
   text-align: center;
   margin-bottom: 33.83px;
@@ -138,7 +142,7 @@
   color: #1e1b39;
   font-size: 28px;
   line-height: 1.35;
-  padding-left: 40px;
+  padding-left: 12px;
 }
 .presentation-item:not(:last-child) {
   margin-bottom: 26px;
