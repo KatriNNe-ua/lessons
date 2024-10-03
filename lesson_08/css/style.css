@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:regular,600&display=swap");
 @import url("reset.css");
 
+body {
+	font-family: "Montserrat Alternates", sans-serif;
+}
 .wrapper {
   min-height: 100%;
-  background: url("../img/main-bg_jpg.webp") 0 0 / 240px repeat;
+  background: url("../img/main-bg_jpg.webp") 0 0 / 240px repeat fixed;
 }
 
 [class*="-container"] {
@@ -21,7 +25,7 @@
 color: rgb(255, 255, 255);
   background-color: rgba(57, 63, 67, 0.721);
   border: 2px solid rgba(0, 0, 0, 0.242);
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 10px black;
 }
 .main-block {
   border-bottom: 2px solid rgba(0, 0, 0, 0.242);
@@ -50,7 +54,7 @@ color: rgb(255, 255, 255);
   vertical-align: middle;
 }
 path:hover {
-  fill: rgb(239, 226, 245);
+  fill: rgb(252, 252, 3);
 }
 .item-circle {
   width: 112px;
