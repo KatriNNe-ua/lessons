@@ -87,6 +87,7 @@ body {
 .block-info__text--black p:first-child {
   font-size: 20px;
   line-height: 1.6;
+  color: #391400;
 }
 
 .btn {
