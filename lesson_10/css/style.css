@@ -253,7 +253,7 @@ body {
   position: absolute;
   max-width: 448px;
   width: 100%;
-  inset: 16;
+  inset: 16px;
   z-index: 1;
 }
 .portfolio__link {
