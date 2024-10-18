@@ -137,7 +137,6 @@ body {
   max-width: 43.16%;
   width: 100%;
   aspect-ratio: 246/305;
-  /* за допомогою border-radius виходить не зовсім схожа фігура  */
   background: url("../img/bg-purple.png") center center/cover no-repeat;
 }
 .studio__laptop-img img {
@@ -193,7 +192,6 @@ body {
   max-width: 43.16%;
   width: 100%;
   aspect-ratio: 246/305;
-  /* за допомогою border-radius виходить не зовсім схожа фігура  */
   background: url("../img/bg-yellow.png") center center/cover no-repeat;
 }
 .studio__woman-img img {
@@ -258,34 +256,41 @@ body {
   inset: 16px;
   z-index: 1;
 }
-.portfolio__link {
-  position: absolute;
+.portfolio__block{
+	  position: absolute;
+	    z-index: 2;
+		 left: 64px;
+  bottom: 67px;
+}
+.portfolio__link a{
+  /* position: absolute; */
   color: #391400;
   font-size: 16px;
   line-height: 2;
-  z-index: 2;
-  left: 64px;
-  bottom: 138px;
-  min-width: 84px;
-  max-height: 38px;
+  /* z-index: 2; */
+  /* left: 64px;
+  bottom: 138px; */
+  /* min-width: 84px; */
+  /* max-height: 38px; */
   border-radius: 19px;
   background: #fff;
   text-align: center;
-  padding: 4px 10px;
+  padding: 4px 15px;
+  margin-bottom: 21px;
 }
 .portfolio__link:hover {
   outline: 3px solid #ef6d58;
 }
 .portfolio__headline {
-  position: absolute;
+  /* position: absolute; */
   color: #fff;
   font-size: 40px;
   font-weight: 800;
   line-height: 1.2;
   padding-left: 5px;
-  z-index: 2;
+  /* z-index: 2;
   left: 59px;
-  bottom: 67px;
+  bottom: 67px; */
 }
 .footer {
   background-color: #ef6d58;
