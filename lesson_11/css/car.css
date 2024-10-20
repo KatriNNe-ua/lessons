@@ -1,0 +1,297 @@
+.car {
+  padding-block: 120px 10px;
+  min-height: 750px;
+  background: url('../img/bg.jpg')  center/cover no-repeat;
+  
+}
+.car__container {
+  position: relative;
+}
+
+.car__wrapper {
+  position: relative;
+}
+.car__wheel {
+  position: absolute;
+  max-width: 180px;
+  min-height: 180px;
+  border-radius: 50%;
+  inset: 428px 130px;
+}
+.wheel__item-1 {
+  position: absolute;
+  background-color: #00000000;
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  inset: 15px 16px;
+  border: 8px solid #bcb1ad;
+  z-index: 10;
+}
+.wheel__item-2 {
+  position: absolute;
+  inset: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  inset: 0 2px;
+  background: radial-gradient(
+    circle,
+    rgba(193, 25, 32, 1) 35%,
+    rgba(8, 4, 4, 1) 36%,
+    rgba(38, 30, 27, 1) 93%
+  );
+  z-index: 8;
+}
+.wheel__item-3 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(64, 64, 66, 1) 0%,
+    rgba(64, 64, 66, 1) 57%,
+    rgba(128, 253, 29, 0) 57%,
+    rgba(69, 252, 167, 0) 100%
+  );
+  z-index: 7;
+  inset: -14px -9px;
+}
+.wheel__item-2::after {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  width: 151px;
+  height: 151px;
+  border-radius: 50%;
+  border: 42px dashed #565351c1;
+}
+
+.wheel__item-4 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #565351;
+  z-index: 11;
+  inset: 56px;
+}
+.wheel__item-4::after {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 10px dotted black;
+}
+.wheel--right {
+  position: absolute;
+  max-width: 180px;
+  min-height: 180px;
+  border-radius: 50%;
+  inset: 428px 835px;
+}
+.car__body {
+  position: absolute;
+  max-width: 998px;
+  min-height: 245px;
+  inset: 282px 84px;
+  /* background-color: rgba(0, 255, 255, 0.292); */
+}
+.body__item-1 {
+  position: absolute;
+  max-width: 990px;
+  height: 40px;
+  inset: 205px 0 0 4px;
+  background-color: #ec6927;
+  /* border-radius: 4px 4px 30px 20px; */
+  border-radius: 4px 0 30px 50px;
+  z-index: 2;
+  perspective: 100px;
+   box-shadow:  0px -15px 20px #f0822a;
+}
+.body__item-2 {
+  position: absolute;
+  max-width: 998px;
+  height: 250px;
+  inset: -20px 7px 0 0;
+  background-color: #f29326;
+  border-radius: 60px 50% 0px 14px/ 70% 60% 0 50%;
+  box-shadow: inset -10px -10px 20px #f0822a;
+}
+.body__item-2::after {
+  content: "";
+  position: absolute;
+  max-width: 25px;
+  height: 97px;
+  inset: -6px 0px 0px 17px;
+  background-color: #c7281d;
+  border-radius: 50%;
+  transform: rotate(20deg);
+  z-index: 5;
+}
+.body__item-2::before {
+  content: "";
+  position: absolute;
+  max-width: 3px;
+  height: 100px;
+  inset: 48px 0px 0px 120px;
+  background-color: #ec6a27;
+}
+
+.body__item-4 {
+  content: "";
+  position: absolute;
+  max-width: 40px;
+  height: 35px;
+  inset: 15px 0px 0px 620px;
+  background: linear-gradient(
+    90deg,
+    rgba(199, 41, 29, 1) 0%,
+    rgba(199, 41, 29, 1) 80%,
+    rgba(170, 34, 36, 1) 81%,
+    rgba(170, 34, 36, 1) 99%
+  );
+  border-radius: 50%;
+  transform: rotate(35deg);
+  border-radius: 76% 24% 0% 100% / 0% 24% 76% 100%;
+  z-index: 5;
+}
+
+.body__item-3 {
+  position: absolute;
+  max-width: 55px;
+  height: 100px;
+  inset: 35px 0px 0 910px;
+  background-color: #594a43;
+  border-radius: 50%;
+  transform: rotate(-50deg);
+  overflow: hidden;
+}
+.body__item-3::after {
+  content: "";
+  position: absolute;
+  max-width: 45px;
+  height: 52px;
+  inset: 55px 0px 0 20px;
+  background-color: #404042;
+  border-radius: 50%;
+  transform: rotate(20deg);
+}
+.body__item-5 {
+  position: absolute;
+  max-width: 6px;
+  height: 145px;
+  inset: 25px 0px 0px 393px;
+  background-color: #ec6927;
+}
+.body__item-5::before {
+  content: "";
+  position: absolute;
+  max-width: 78px;
+  height: 24px;
+  inset: 17px 0px 0px -93px;
+  background: linear-gradient(
+    180deg,
+    rgba(89, 74, 67, 1) 0%,
+    rgba(89, 74, 67, 1) 50%,
+    rgba(64, 64, 66, 1) 51%,
+    rgba(64, 64, 66, 1) 100%
+  );
+  border-radius: 10px;
+}
+.body__item-5::after {
+  content: "";
+  position: absolute;
+  max-width: 78px;
+  height: 24px;
+  inset: 17px -100px 0px 15px;
+  background: linear-gradient(
+    180deg,
+    rgba(89, 74, 67, 1) 0%,
+    rgba(89, 74, 67, 1) 50%,
+    rgba(64, 64, 66, 1) 51%,
+    rgba(64, 64, 66, 1) 100%
+  );
+  border-radius: 10px;
+}
+.body__item-6 {
+  position: absolute;
+  max-width: 260px;
+  height: 120px;
+  inset: -100px 0px 0 398px;
+  background: linear-gradient(
+    50deg,
+    rgba(64, 64, 66, 1) 0%,
+    rgba(64, 64, 66, 1) 49%,
+    rgba(118, 92, 78, 1) 50%,
+    rgba(118, 92, 78, 1) 52%,
+    rgba(64, 64, 66, 1) 53%,
+    rgba(64, 64, 66, 1) 99%
+  );
+  border-radius: 0% 270px 100px 0% / 100% 110% 0% 0%;
+  z-index: 2;
+}
+.body__item-7 {
+  position: absolute;
+  max-width: 272px;
+  height: 120px;
+  inset: -100px 0px 0 410px;
+  background-color: #f29326;
+  border-radius: 0% 270px 100px 0% / 100% 110% 0% 0%;
+  z-index: 1;
+}
+
+.body__up {
+  position: absolute;
+  max-width: 730px;
+  height: 140px;
+  inset: -120px 0px 0 40px;
+  background-color: #f29326;
+  border-radius: 120px 50% 0 0 / 100% 100% 0 0;
+  overflow: hidden;
+  z-index: 1;
+}
+.body__up::after {
+  content: "";
+  max-width: 110px;
+  height: 220px;
+  inset: -50px 0px 0px 560px;
+  background-color: #404042;
+  position: absolute;
+  border-radius: 14% 98% 100% 0% / 0% 100% 0% 100%;
+  transform: rotate(-50deg);
+}
+.body__item-8 {
+  position: absolute;
+  max-width: 260px;
+  height: 120px;
+  inset: -100px 10px 0px 125px;
+ background: linear-gradient(
+    50deg,
+    rgba(64, 64, 66, 1) 0%,
+    rgba(64, 64, 66, 1) 49%,
+    rgba(118, 92, 78, 1) 50%,
+    rgba(118, 92, 78, 1) 56%,
+	rgba(64, 64, 66, 1) 57%,
+	rgba(64, 64, 66, 1) 66%,
+
+	 rgba(118, 92, 78, 1) 67%,
+    rgba(118, 92, 78, 1) 69%,
+    rgba(64, 64, 66, 1) 70%,
+    rgba(64, 64, 66, 1) 99%
+  );
+  border-radius: 150px 0% 100% 0% / 60% 100% 0% 68%;
+  z-index: 2;
+}
+.body__item-9 {
+  position: absolute;
+  max-width: 90px;
+  height: 30px;
+  inset: -118px 10px 0px 65px;
+  background-color: #f29326;
+  border-radius: 150px 0% 100% 60px / 60% 100% 0% 100%;
+  z-index: 2;
+}
