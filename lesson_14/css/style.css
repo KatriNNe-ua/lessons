@@ -210,3 +210,6 @@ margin: 0 auto;
 .footer{
 	padding-block: 15px;
 }
+.discussion__input:focus{
+	outline-color: #fff;
+}
