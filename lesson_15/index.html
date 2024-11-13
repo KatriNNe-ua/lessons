@@ -9,6 +9,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 	<link rel="manifest" href="site.webmanifest">
 	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/adaptive.css"> -->
 	<title>Lesson 15</title>
 </head>
 
@@ -17,9 +18,13 @@
 		<header class="header">
 			<div class="header__container">
 				<h1 class="header__title">Homework 15</h1>
+				<ul class="nav">
+					<li class="nav__portfolio"><a href="#portfolio">Portfolio Template</a></li>
+					<li class="nav__portfolio"><a href="film.html">Dark Theme Website</a></li>
+				</ul>
 			</div>
 		</header>
-		<main class="main">
+		<main class="main" id="portfolio">
 			<div class="portfolio">
 				<div class="portfolio__container">
 					<div class="portfolio__subject subject">
@@ -27,11 +32,11 @@
 						<h2 class="subject__info subject__info--center">Latest Work</h2>
 					</div>
 					<ul class="portfolio__list">
-						<li><a href="#" class="portfolio__link">Show All<sup>14</sup></a></li>
-						<li><a href="#" class="portfolio__link">Design<sup>6</sup></a></li>
-						<li><a href="#" class="portfolio__link">Branding<sup>4</sup></a></li>
-						<li><a href="#" class="portfolio__link">Illustration<sup>3</sup></a></li>
-						<li><a href="#" class="portfolio__link">Motion<sup>1</sup></a></li>
+						<li><a href="#" class="portfolio__link portfolio__link--arrow">Show All<sup>14</sup></a></li>
+						<li><a href="#" class="portfolio__link portfolio__link--hidden">Design<sup>6</sup></a></li>
+						<li><a href="#" class="portfolio__link portfolio__link--hidden">Branding<sup>4</sup></a></li>
+						<li><a href="#" class="portfolio__link portfolio__link--hidden">Illustration<sup>3</sup></a></li>
+						<li><a href="#" class="portfolio__link portfolio__link--hidden">Motion<sup>1</sup></a></li>
 					</ul>
 
 					<div class="portfolio__illustration illustration">

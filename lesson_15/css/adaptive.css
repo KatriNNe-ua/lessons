@@ -1,0 +1,24 @@
+@media (max-width: 887px) {
+  .illustration {
+    gap: 15px;
+  }
+    .illustration__block {
+      aspect-ratio: 329 / 416;
+  }
+}
+@media (max-width: 668px) {
+
+  .illustration__subtitle {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+}
+
+@media (max-width: 599px){
+	 .illustration__block {
+    aspect-ratio: 329 / 416;
+   
+  }
+
+}
