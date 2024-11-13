@@ -247,8 +247,7 @@ top: -67px; */
 .our-genres__upward {
   margin-bottom: 50px;
 }
-.our-genres__genres-cards {
-}
+
 .genres-cards {
 	display: flex;
 	gap: 30px;
@@ -336,6 +335,7 @@ padding: 5px;
 }
 
 @media (max-width: 1300px) {
+
 		 .our-genres {
 
   padding-block: 25px 40px;
@@ -385,16 +385,14 @@ padding: 5px;
 	padding: 24px;
 	flex: 1 0 181px;
   }
-
 }
 @media (max-width: 1150px) {
   /* Другий варіант */
-  .cards--second{
+  /* .cards--second{
 		flex-wrap: wrap;
 		justify-content: center;
-	}
+	} */
 	 .our-genres {
-
   padding-block: 25px ;
 }
 .watch-movies {
