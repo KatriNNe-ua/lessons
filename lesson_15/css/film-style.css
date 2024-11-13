@@ -272,6 +272,9 @@ top: -67px; */
   max-width: 215px;
   width: 100%;
   flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 .genres-cards__wrapper::after {
   position: absolute;
@@ -285,7 +288,15 @@ top: -67px; */
 .genres-cards__wrapper:hover::after {
   opacity: 0;
 }
-.genres-cards__group{
+
+.genres-cards__img{
+	aspect-ratio: 105 / 123;
+	object-fit: cover;
+	width: calc(50% - 2.5px);
+	flex-shrink: 1;
+	  border-radius: 10px;
+}
+/* .genres-cards__group{
 	display: flex;
   gap: 5px;
   flex-shrink: 1;
@@ -297,7 +308,7 @@ top: -67px; */
   object-fit: cover;
   width: 100%;
   flex: 0 1 45%;
-}
+} */
 
 .genres-cards__info {
   display: flex;
