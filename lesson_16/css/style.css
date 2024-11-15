@@ -140,7 +140,7 @@ body {
   }
 
   .menu {
-    row-gap: 15px;
+    row-gap: 25px;
     align-items: flex-end;
     flex-direction: column;
     position: fixed;
@@ -149,7 +149,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 100px 15px 30px;
-    font-size: 24px;
+    font-size: 26px;
     z-index: 2;
     background-color: #28293e;
     overflow: auto;
