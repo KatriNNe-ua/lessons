@@ -165,9 +165,7 @@ body {
     background-color: #28293e;
     z-index: 3;
   }
-  /* .menu__item {
-    padding-block: 8px;
-  } */
+
 }
 .open-menu .menu,
 .open-menu .menu::before {
