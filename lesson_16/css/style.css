@@ -155,6 +155,7 @@ body {
     overflow: auto;
     flex-wrap: nowrap;
     transition: all 0.3s;
+    justify-content: center;
   }
   .menu::before {
     content: "";
