@@ -140,7 +140,7 @@ body {
   }
 
   .menu {
-    row-gap: 25px;
+    gap: 35px;
     align-items: flex-end;
 	justify-content: center;
     flex-direction: column;
