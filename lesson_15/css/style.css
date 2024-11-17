@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Epilogue:regular,700,800,900&display=swap");
 @import url("reset.css");
-@import url("adaptive.css");
 
 body {
   font-family: "Epilogue", sans-serif;
@@ -298,6 +297,7 @@ body {
   inset: -69.5% 94%; */
   z-index: 4;
   margin-top: -60px;
+	align-content: flex-end;
 }
 .get-started__img-woman::after {
   content: "";
