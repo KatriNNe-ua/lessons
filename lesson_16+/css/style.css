@@ -451,6 +451,9 @@ body {
   }
 }
 @media (max-width: 869px) {
+	.studio {
+  padding-block: 100px 56px;
+}
   .studio__wrapper {
     flex-wrap: wrap;
 	row-gap: 30px;
