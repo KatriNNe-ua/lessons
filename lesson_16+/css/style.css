@@ -55,16 +55,16 @@ body {
   max-width: 100%;
   flex-shrink: 0;
 }
-.header__logo img{
-	aspect-ratio: 1;
-	max-width: 48px;
-	width: 100%;
-	object-fit: cover;
+.header__logo img {
+  aspect-ratio: 1;
+  max-width: 48px;
+  width: 100%;
+  object-fit: cover;
 }
 .menu {
   line-height: 2;
   display: flex;
-  column-gap: 100px; 
+  column-gap: 100px;
   row-gap: 2px;
   flex-wrap: wrap;
   align-items: center;
@@ -100,17 +100,16 @@ body {
   display: none;
 }
 
-@media (max-width: 904px){
-	.menu {
-  column-gap: 50px; 
-	}
+@media (max-width: 904px) {
+  .menu {
+    column-gap: 50px;
+  }
 }
-@media (max-width: 753px){
-	.menu {
-  column-gap: 17px; 
-	}
+@media (max-width: 753px) {
+  .menu {
+    column-gap: 17px;
+  }
 }
-
 
 @media (max-width: 660px) {
   .header__contact {
@@ -222,16 +221,17 @@ body {
 }
 .studio__title span {
   position: relative;
-  color: transparent;
 }
 .studio__title span:before {
   content: "";
   /* max-width: 28.85%; 148/513 */
-  width: 720%;
+  max-width: 148px;
+  width: 100%;
   aspect-ratio: 1;
   background: url("../img/star-title.svg") center center/contain no-repeat;
   position: absolute;
-  inset: -40px -95px;
+  right: -49px;
+  top: -44px;
   z-index: -1;
   animation-name: stars;
   animation-duration: 20s;
@@ -320,6 +320,7 @@ body {
   aspect-ratio: 246 / 305;
   background-color: #b550f6;
   border-radius: 50% 50% 6px 6px / 41% 41% 6px 6px;
+  /* overflow: hidden; */
 }
 .studio__laptop-img img {
   max-width: 103.8%;
@@ -432,11 +433,12 @@ body {
   border-radius: 50%;
   padding: 5px 6px 0 4px;
   height: 48px;
+  overflow: hidden;
 }
 .blockguote__img img {
   aspect-ratio: 38 / 43;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .blockguote__text {
@@ -449,7 +451,7 @@ body {
   margin-top: -4px;
 }
 
- /* Адаптацію робила згідно з макетом у figmi*/
+/* Адаптацію робила згідно з макетом у figmi*/
 @media (max-width: 1144px) {
   .studio__wrapper {
     margin-bottom: 44px;
@@ -460,22 +462,22 @@ body {
   .studio__title {
     font-size: 62px;
   }
-  .studio__title span:before {
+  /* .studio__title span:before {
     inset: -35px -75px;
-  }
+  } */
 }
 @media (max-width: 869px) {
-	.studio {
-  padding-block: 100px 56px;
-}
+  .studio {
+    padding-block: 100px 56px;
+  }
   .studio__wrapper {
     flex-wrap: wrap;
-	row-gap: 30px;
+    row-gap: 30px;
   }
   .studio__content {
     order: 2;
     flex: 1 1 100%;
-	padding: 0;
+    padding: 0;
   }
   .studio__images {
     order: 1;
@@ -487,9 +489,9 @@ body {
   .studio__title {
     font-size: 56px;
   }
-  .studio__title span:before {
+  /* .studio__title span:before {
     inset: -30px -65px;
-  }
+  } */
 }
 @media (max-width: 438px) {
   .blockguote__name {
