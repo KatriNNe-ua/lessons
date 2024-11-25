@@ -7,12 +7,9 @@ body {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   background-color: #fdf0e9;
-}
-.wrapper > main {
-  flex-grow: 1;
 }
 
 [class*="__container"] {
@@ -108,7 +105,7 @@ body {
   /* border-radius: 6px; */
   transition: transform 0.5s;
 }
-.illustration__img--center{
+.illustration__img--center {
   object-position: center;
 }
 .illustration__block::after {
@@ -199,9 +196,9 @@ body {
   }
 }
 @media (max-width: 660px) {
-	.portfolio__illustration {
-  margin-bottom: 48px;
-}
+  .portfolio__illustration {
+    margin-bottom: 48px;
+  }
   .portfolio__list {
     grid-template-columns: 1fr;
     color: rgba(57, 20, 0, 0.64);
