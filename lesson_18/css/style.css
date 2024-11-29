@@ -42,6 +42,7 @@ body {
   padding: 43px 10px;
   display: flex;
   justify-content: center;
+
 }
 .item__content img {
   position: absolute;
