@@ -73,12 +73,13 @@ body {
 .item--reverse {
   flex-direction: column-reverse;
 }
-.item .item__content:first-child {
-  aspect-ratio: 304 / 184;
-}
 .item .item__content:last-child {
   aspect-ratio: 304 / 296;
 }
+.item .item__content:first-child {
+  aspect-ratio: 304 / 184;
+}
+
 .item.item--small .item__content {
   aspect-ratio: 304 / 152;
 }
