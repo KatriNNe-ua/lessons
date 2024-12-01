@@ -1,0 +1,101 @@
+/* Підключення фрифтів */
+
+/* Google Fonts (Plugin) */
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap");
+
+/* Локальне підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+	font-family: "Manrope", sans-serif;
+	color: #fff;
+	font-size: 18px;
+	background-color: #333;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip; /* clip */
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+
+
+
+/* GRID */
+/*  
+.items {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, auto);
+
+	align-items: start;
+
+	column-gap: 32px;
+	row-gap: 26px;
+}
+*/
+
+/* FLEX */
+
+/* .items {
+	display: flex;
+	column-gap: 32px;
+	row-gap: 26px;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	max-block-size: 1034px;
+} */
+ .item{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+ }
+.item {
+	inline-size: 305px;
+}
+
+.item__content {
+	background-color: #7a956b;
+	border-radius: 10px;
+	text-align: center;
+	padding: 15px;
+}
+
+.item:nth-child(17n + 1) .item__content,
+.item:nth-child(17n + 3) .item__content,
+.item:nth-child(17n + 6) .item__content,
+.item:nth-child(17n + 14) .item__content,
+.item:nth-child(17n + 15) .item__content {
+	aspect-ratio: 305 / 183;
+}
+
+.item:nth-child(17n + 2) .item__content,
+.item:nth-child(17n + 4) .item__content,
+.item:nth-child(17n + 5) .item__content,
+.item:nth-child(17n + 13) .item__content,
+.item:nth-child(17n + 16) .item__content {
+	aspect-ratio: 305 / 295;
+}
+
+.item:nth-child(17n + 7) .item__content,
+.item:nth-child(17n + 8) .item__content,
+.item:nth-child(17n + 9) .item__content,
+.item:nth-child(17n + 10) .item__content,
+.item:nth-child(17n + 11) .item__content,
+.item:nth-child(17n + 12) .item__content {
+	aspect-ratio: 305 / 150.5;
+}
+
+.item:nth-child(17n + 17) .item__content {
+	aspect-ratio: 305 / 504;
+}
