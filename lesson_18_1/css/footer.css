@@ -2,8 +2,6 @@
   padding-block: 32px 32px;
   background-color: #e7ecff;
 }
-.footer__container {
-}
 .footer__wrapper {
   display: flex;
   align-items: center;
@@ -73,6 +71,7 @@
 @media (min-width: 540px) {
 	.footer {
   padding-block: 61px 32px;
+	}
   .footer__wrapper {
     padding-bottom: 40px;
   }
