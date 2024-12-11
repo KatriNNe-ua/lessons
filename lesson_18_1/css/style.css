@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900&display=swap");
+@import url("reset.css");
+@import url("header.css");
+@import url("hero.css");
+@import url("section.css");
+@import url("footer.css");
+
+body {
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  max-width: 1140px;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+.btn {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  border-radius: 2px;
+  background: #111b47;
+  position: relative;
+  top: 0;
+  transition: all 0.5s;
+  padding: 5px 10px;
+  border: 2px solid #091133;
+}
+.btn---transparent {
+  background-color: transparent;
+
+  color: #091133;
+}
+.btn--fz12 {
+  font-size: 12px;
+  line-height: 1.5;
+  border: none;
+}
+.btn--fz14 {
+  font-size: 14px;
+  line-height: 1.7;
+  border: none;
+}
+
+@media (any-hover: hover) {
+  .btn:hover {
+    top: 3px;
+    box-shadow: 0 5px 8px #111b4750;
+    background: #152156;
+    color: #fff;
+  }
+}
+@media (min-width: 470px) {
+  .btn--width-short {
+    max-width: 150px;
+  }
+  .btn--width-long {
+    max-width: 190px;
+  }
+  .btn--width-average {
+    max-width: 109px;
+  }
+}

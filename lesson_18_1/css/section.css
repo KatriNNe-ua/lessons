@@ -1,0 +1,187 @@
+.section {
+  padding-block: 50px;
+}
+.section__content {
+  margin-bottom: 10px;
+}
+.section__content *:last-child {
+  margin-bottom: 0;
+}
+.section__title,
+.price__title {
+  color: #091133;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.33;
+  margin-bottom: 16px;
+}
+.section__info,
+.price__text {
+  color: #6f7cb2;
+  line-height: 1.62;
+  margin-bottom: 40px;
+}
+.section__info p:not(:last-child),
+.price__text p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.card {
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.card__img {
+  max-width: 36px;
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: 14px;
+}
+.card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card__title {
+  color: #091133;
+  font-weight: 500;
+  line-height: 1.62;
+  margin-bottom: 6px;
+}
+.card__info {
+  color: #5d6970;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.card__info p:not(:last-child) {
+  margin-bottom: 6px;
+}
+.section__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.section__img--young-woman img {
+  aspect-ratio: 540 / 524;
+}
+.section__img--stylish-woman img {
+  aspect-ratio: 480 / 316;
+}
+.section__img--two-people img {
+  aspect-ratio: 540 / 387;
+}
+.section__img--person img {
+  aspect-ratio: 445 / 312;
+}
+
+.price {
+  padding-block: 50px 36px;
+  text-align: center;
+  /* background-color: #e7ecff88; */
+  position: relative;
+  z-index: 2;
+}
+.price::after {
+  position: absolute;
+  content: "";
+  background: url("../img/price-bg3.png") top center/cover no-repeat;
+  inset: 0;
+  z-index: -1;
+ /* width: 223.333333%; */
+ /* max-width: 2546px; */
+ width: 100%;
+ height: 100%;
+ /* aspect-ratio: 2546 / 938; */
+}
+.price__text {
+  margin-inline: auto;
+  max-width: 600px;
+}
+
+.price__number {
+  color: #222f65;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.32;
+  letter-spacing: 1px;
+}
+.price__descr {
+  color: #37447e;
+  line-height: 1.62;
+  margin-bottom: 30px;
+}
+.price__info {
+  color: #5d6970;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-bottom: 9px;
+}
+@media (min-width: 470px) {
+  .prise {
+    padding-block: 137px 76px;
+  }
+  .price__descr {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 800px) {
+  .section {
+    padding-block: 109px;
+  }
+  .section__container {
+    column-gap: 30px;
+  }
+
+  .section__container {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+    align-items: center;
+  }
+  .section__container--reverse {
+    flex-direction: row-reverse;
+  }
+  .section__content {
+    /* flex: 1 1 47.36%; */
+    margin-bottom: 0;
+    justify-self: end;
+  }
+  .section__content--widht-limited {
+    max-width: 445px;
+  }
+  .section__info.section__info--margin-btn {
+    margin-bottom: 44px;
+  }
+  .section__content--reverse {
+    order: 2;
+  }
+  .section__img--reverse {
+    /* flex: 1 1 47.36%; */
+    order: 1;
+  }
+  .section__title,
+  .price__title {
+    color: #091133;
+    font-size: 36px;
+  }
+  .section__info {
+    margin-bottom: 80px;
+  }
+  .section__img--young-woman img {
+    width: 98.5%;
+  }
+  .section__img--stylish-woman img {
+    width: 87.55%;
+  }
+  .section__img--two-people img {
+    width: 98.55%;
+  }
+  .section__img--person img {
+    width: 81.3%;
+  }
+  .prise {
+    padding-block: 237px 176px;
+  }
+}
