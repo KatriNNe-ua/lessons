@@ -111,7 +111,6 @@ body {
   object-fit: contain;
 }
 .header__list {
-  flex-grow: 218px;
   display: flex;
   row-gap: 10px;
   column-gap: 40px;
@@ -273,7 +272,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.hero__img--1 {
+.hero__img--one {
   max-width: 209px;
   width: 100%;
   grid-row: span 2;
@@ -281,14 +280,14 @@ body {
   align-self: end;
   margin-bottom: 10px;
 }
-.hero__img--2 {
+.hero__img--two {
   aspect-ratio: 143 / 214;
   max-width: 143px;
   width: 100%;
   align-self: end;
   margin-bottom: 10px;
 }
-.hero__img--3 {
+.hero__img--three{
   aspect-ratio: 150 / 228;
   max-width: 150px;
   width: 100%;
@@ -297,7 +296,7 @@ body {
   justify-self: end;
   margin-bottom: 40px;
 }
-.hero__img--4 {
+.hero__img--four {
   aspect-ratio: 108 / 163;
   max-width: 108px;
   width: 100%;
