@@ -29,7 +29,7 @@
 				</nav>
 				<div class="header__actions">
 					<a href="#" class="header__contact">Contact</a>
-					<button class="header__btn-menu"><span></span></button>
+					<button class="header__btn-menu" aria-label="open menu"><span></span></button>
 				</div>
 			</div>
 		</header>
@@ -97,7 +97,8 @@
 							to partner.</p>
 					</div>
 					<div class="video-reel__video">
-						<img src="img/video.jpg" alt="image">
+						<video src="video/cat.webm" controls poster="img/video.jpg">
+						</video>
 					</div>
 					<div class="video-reel__info">
 						<p>Ability to put themselves in the merchant's shoes. It is meant to partner on the long
@@ -128,11 +129,13 @@
 			</article>
 			<div class="company-logo">
 				<div class="company-logo__container">
-					<img src="img/digitalside_png.webp" alt="logo" class="company-logo__img">
-					<img src="img/vortex_png.webp" alt="logo" class="company-logo__img">
-					<img src="img/travel_explorer_png.webp" alt="logo" class="company-logo__img">
-					<img src="img/fuzion_png.webp" alt="logo" class="company-logo__img">
-					<img src="img/media_fury_png.webp" alt="logo" class="company-logo__img">
+					<ul class="company-logo__list">
+						<li class="company-logo__item"><img src="img/digitalside_png.webp" alt="logo" class="company-logo__img"></li>
+						<li class="company-logo__item"><img src="img/vortex_png.webp" alt="logo" class="company-logo__img"></li>
+						<li class="company-logo__item"><img src="img/travel_explorer_png.webp" alt="logo" class="company-logo__img"></li>
+						<li class="company-logo__item"><img src="img/fuzion_png.webp" alt="logo" class="company-logo__img"></li>
+						<li class="company-logo__item"> <img src="img/media_fury_png.webp" alt="logo" class="company-logo__img"></li>
+					</ul>				
 				</div>
 			</div>
 			<section class="get-started">
@@ -185,22 +188,24 @@
 							</ul>
 						</li>
 					</ul>
-					<div class="footer__socials-icons socials-icons">
-						<div class="socials-icons__img">
-							<img src="img/logo-facebook_svg.svg" alt="icon facebook">
-						</div>
-						<div class="socials-icons__img">
-							<img src="img/logo_twitter_svg.svg" alt="icon twitter">
-						</div>
-						<div class="socials-icons__img">
-							<img src="img/logo_instagram_svg.svg" alt="icon instagram">
-						</div>
-					</div>
+					<ul class="footer__socials-icons socials-icons">
+						<li class="socials-icons__img">
+							<a href="#" class="socials-icons__link"><img src="img/logo-facebook_svg.svg" alt="icon facebook"></a>
+						</li>
+						<li class="socials-icons__img">
+							<a href="#" class="socials-icons__link"><img src="img/logo_twitter_svg.svg" alt="icon twitter"></a>
+						</li>
+						<li class="socials-icons__img">
+							<a href="#" class="socials-icons__link"><img src="img/logo_instagram_svg.svg" alt="icon instagram"></a>
+						</li>
+					</ul>
 				</div>
 				<div class="footer__copyright copyright">
 					<p>Copyright &copy; 2022 Laaqiq. All Rights Reserved.</p>
-					<a href="#" class="copyright__link">Terms of Use</a>
-					<a href="#" class="copyright__link">Privacy Policy</a>
+					<ul class="copyright__list">
+						<li class="copyright__item"><a href="#" class="copyright__link">Terms of Use</a></li>
+						<li class="copyright__item"><a href="#" class="copyright__link">Privacy Policy</a></li>
+					</ul>
 				</div>
 
 
