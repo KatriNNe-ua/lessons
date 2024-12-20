@@ -99,8 +99,7 @@
   box-shadow: 0px 0.75rem 4rem 0px rgba(28, 25, 25, 0.12);
 }
 .socials__link {
-  max-width: 3rem;
-  width: 100%;
+  width: 3rem;
   aspect-ratio: 1;
   padding: 0.9375rem;
   border-radius: 0.25rem;
