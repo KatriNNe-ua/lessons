@@ -7,7 +7,7 @@
 .discuss__wrapper {
   border-radius: 0.9375rem;
   box-shadow: 0px 3.6875rem 7.75rem 0px rgba(0, 0, 0, 0.12);
-  padding: 5.5rem;
+  padding: 1.25rem;
   display: grid;
   gap: 2.5rem;
   align-items: center;
@@ -122,11 +122,14 @@
 .btn__form{
 	width: 100%;
 }
-
+	.discuss__wrapper{
+     padding: 2.5rem;
+	}
 }
 @media (min-width: 50em){
 	.discuss__wrapper{
    grid-template-columns: 481fr 560fr;
+     padding: 4.25rem;
 	}
 	.contacts__item {
   max-width: 21rem;
@@ -136,6 +139,6 @@
 @media (min-width: 62.5em){
 	.discuss__wrapper{
   column-gap: 6.4375rem;
-  padding: 4.25rem;
+  padding: 5.5rem;
 	}
 }
