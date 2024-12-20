@@ -146,10 +146,10 @@
     transition: all 0.3s;
   }
   .open-menu .header__btn-menu::before {
-    transform: rotate(45deg) translateY(1.5px);
+    transform: rotate(45deg) translateY(0.0938rem);
   }
   .open-menu .header__btn-menu::after {
-    transform: rotate(-45deg) translateY(-1.5px);
+    transform: rotate(-45deg) translateY(-0.0938rem);
   }
   .open-menu .header__btn-menu span {
     width: 0;

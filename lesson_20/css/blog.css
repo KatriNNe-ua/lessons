@@ -60,7 +60,7 @@
   grid-template-columns: 1fr;
   gap: 1.5rem;
   /* overflow-x: auto; */
-   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(18.125rem, 1fr));
 }
 .cards-blog__link {
 width: 100%;
@@ -99,5 +99,5 @@ width: 100%;
   color: var(--text-color-dark);
   font-size: 1.125rem;
   font-weight: 500;
-  line-height: 1, 33;
+  line-height: 1.33;
 }

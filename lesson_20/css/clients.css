@@ -47,7 +47,7 @@
   height: 100%;
   object-fit: contain;
 }
-@media (min-width: 800px) {
+@media (min-width: 50em) {
   .clients__list {
     grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
   }
