@@ -1,0 +1,14 @@
+.together {
+  padding-block: 3.125rem;
+  background-color: var(--main-dark-color);
+}
+@media (min-width: 40.625em){
+.together{
+  padding-block: 4.375rem;
+}
+}
+@media (min-width: 59.375em){
+	.together {
+  padding-block: 6.25rem;
+}
+}

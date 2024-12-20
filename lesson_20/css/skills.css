@@ -1,0 +1,61 @@
+
+.skills {
+  background-color: var(--bg-light-color);
+  padding-block: 3.125rem;
+}
+@media (min-width: 40.625em) {
+  .skills {
+    padding-block: 5rem;
+  }
+}
+@media (min-width: 59.375em) {
+  .skills {
+    padding-block: 6.25rem;
+  }
+}
+@media (min-width: 68.75em) {
+  .skills {
+    padding-block: 9.375rem;
+  }
+}
+.skills__container {
+  display: grid;
+  gap: 1.875rem;
+}
+.skills__wrapper {
+  display: grid;
+  row-gap: 1.5rem;
+}
+.skills__item {
+  padding: 2rem;
+  border-radius: 0.375rem;
+  background: var(--light-color);
+  border-left: 0.3125rem solid var(--light-color);
+  transition: all 0.3s;
+}
+.skills__item:hover {
+  box-shadow: 0px 2rem 6rem 0px rgba(28, 25, 25, 0.16);
+  border-left: 0.3125rem solid var(--accent-color);
+}
+.skills__subtitle {
+  color: var(--main-dark-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.skills__text{
+  color: var(--text-color-third);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+.text p:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 62.5em) {
+  .skills__container {
+    grid-template-columns: 529fr 648fr;
+    align-items: center;
+	 column-gap: 8.9375rem;
+  }
+}
