@@ -1,0 +1,49 @@
+@use 'sass:math';
+@import '_mixins.scss';
+@import "https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap";
+@import '_reset.scss';
+
+$mainDarkColor: #141414;
+$moreDarkColor: #0F0F0F;
+$lessDarkColor: #1A1A1A;
+$mainTextColor: #fff;
+$textColor: #999;
+$textColor2: #BFBFBF;
+$borderColor: #1F1F1F;
+$borderColor2: #262626;
+$acсentColor: #E50000;
+
+body{
+	font-family: "Manrope", sans-serif;
+	.open-menu & {
+  overflow: hidden;
+}
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	background-color: $mainDarkColor;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+[class*="__container"] {
+	max-width: toRem(1624);
+	margin-inline: auto;
+	padding-inline: toRem(15);
+}
+
+
+
+@import '_components.scss';
+@import '_header.scss';
+@import '_hero.scss';
+@import '_movies.scss';
+ 
+.footer{
+	color: $mainTextColor;
+	padding: toRem(20);
+}
