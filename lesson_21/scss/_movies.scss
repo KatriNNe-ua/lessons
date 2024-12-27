@@ -165,7 +165,7 @@
 .cards {
 	display: grid;
 	overflow-y: auto;
-	scroll-snap-type: x mandatory;
+
 	&__item {
 		background-color: $lessDarkColor;
 		border-radius: toRem(12);
