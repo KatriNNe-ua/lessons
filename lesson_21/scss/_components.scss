@@ -53,7 +53,7 @@
 	}
 	&--background {
 			background-color: $moreDarkColor;
-			border-radius: 12px;
+			border-radius: toRem(12);
 			border: toRem(1) solid $borderColor;
 			padding: toRem(12);
 			@media (min-width: toEm(1310)){
