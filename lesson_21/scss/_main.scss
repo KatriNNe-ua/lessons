@@ -1,18 +1,18 @@
 $mainDarkColor: #141414;
-$moreDarkColor: #0F0F0F;
-$lessDarkColor: #1A1A1A;
+$moreDarkColor: #0f0f0f;
+$lessDarkColor: #1a1a1a;
 $mainTextColor: #fff;
 $textColor: #999;
-$textColor2: #BFBFBF;
-$borderColor: #1F1F1F;
+$textColor2: #bfbfbf;
+$borderColor: #1f1f1f;
 $borderColor2: #262626;
-$acсentColor: #E50000;
+$acсentColor: #e50000;
 
-body{
+body {
 	font-family: "Manrope", sans-serif;
 	.open-menu & {
-  overflow: hidden;
-}
+		overflow: hidden;
+	}
 }
 .wrapper {
 	min-height: 100%;
@@ -20,9 +20,9 @@ body{
 	display: flex;
 	flex-direction: column;
 	background-color: $mainDarkColor;
-}
-.wrapper > main {
-	flex-grow: 1;
+	> main {
+		flex-grow: 1;
+	}
 }
 
 [class*="__container"] {
@@ -30,7 +30,7 @@ body{
 	margin-inline: auto;
 	padding-inline: toRem(15);
 }
-.footer{
+.footer {
 	color: $mainTextColor;
 	padding: toRem(20);
 }
