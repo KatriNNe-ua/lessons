@@ -62,6 +62,10 @@
 		}
 	}
 	&__decor {
+		animation-name: decor;
+		animation-timing-function: linear;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
 		position: absolute;
 		border-radius: toRem(30);
 		background: $acсentColor;

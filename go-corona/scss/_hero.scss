@@ -44,6 +44,12 @@
 
 	// .hero__content-block
 	&__content-block {
+		animation-name: hero;
+		animation-timing-function: linear;
+		animation-delay: 3.5s;
+		animation-fill-mode: forwards;
+		animation-duration: 1s;
+		opacity: 0;
 		@media (min-width: toEm(740)) {
 			padding-left: toRem(17);
 		}
@@ -52,6 +58,12 @@
 	// .hero__img
 
 	&__img {
+		animation-name: hero;
+		animation-timing-function: linear;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+		animation-duration: 1s;
+		opacity: 0;
 		max-width: toRem(547);
 		width: 100%;
 		aspect-ratio: 547/394;
@@ -66,6 +78,13 @@
 	// .hero__watch-video
 
 	&__watch-video {
+			animation-name: video;
+		animation-timing-function: linear;
+		animation-delay: 4s;
+		animation-fill-mode: forwards;
+		animation-duration: 1s;
+		opacity: 0;
+				transform: translateX(toRem(-60));
 		display: grid;
 		grid-template-columns: auto auto;
 		column-gap: toRem(12);
