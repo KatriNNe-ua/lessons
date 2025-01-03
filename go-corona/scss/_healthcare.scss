@@ -5,10 +5,6 @@
 
 	// .healthcare__container
 
-	&__container {
-		display: grid;
-		grid-template-columns: repeat();
-	}
 	&__content-block {
 		margin-bottom: toRem(20);
 		@media (min-width: toEm(740)) {
