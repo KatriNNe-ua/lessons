@@ -1,0 +1,33 @@
+$acсentColor: #EC5863;
+$acсentColor2: #4285F4;
+$bgColorLight: #FFF;
+$bgColor: #FAFBFD;;
+$colorDark: #000;
+$textColorMain: #616161;
+$textColorBtn: #FCFDFE;
+$textColorLight: #B0B0B0;
+
+body {
+	font-family: "Rubik", sans-serif;
+	.open-menu & {
+		overflow: hidden;
+	}
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	background-color: $bgColor;
+	main {
+		flex-grow: 1;
+	}
+}
+
+[class*="__container"] {
+	max-width: toRem(1088);
+	margin-inline: auto;
+	padding-inline: toRem(15);
+}
+
+
