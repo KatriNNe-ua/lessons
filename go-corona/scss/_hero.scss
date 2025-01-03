@@ -44,30 +44,32 @@
 
 	// .hero__content-block
 	&__content-block {
-		animation-name: hero;
-		animation-timing-function: linear;
-		animation-delay: 3.5s;
-		animation-fill-mode: forwards;
-		animation-duration: 1s;
-		opacity: 0;
 		@media (min-width: toEm(740)) {
 			padding-left: toRem(17);
+			animation-name: hero;
+			animation-timing-function: linear;
+			animation-delay: 3.5s;
+			animation-fill-mode: forwards;
+			animation-duration: 1s;
+			opacity: 0;
 		}
 	}
 
 	// .hero__img
 
 	&__img {
-		animation-name: hero;
-		animation-timing-function: linear;
-		animation-delay: 2s;
-		animation-fill-mode: forwards;
-		animation-duration: 1s;
-		opacity: 0;
 		max-width: toRem(547);
 		width: 100%;
 		aspect-ratio: 547/394;
 		justify-self: center;
+		@media (min-width: toEm(740)) {
+			animation-name: hero;
+			animation-timing-function: linear;
+			animation-delay: 2s;
+			animation-fill-mode: forwards;
+			animation-duration: 1s;
+			opacity: 0;
+		}
 		img {
 			width: 100%;
 			height: 100%;
@@ -78,13 +80,13 @@
 	// .hero__watch-video
 
 	&__watch-video {
-			animation-name: video;
+		animation-name: video;
 		animation-timing-function: linear;
 		animation-delay: 4s;
 		animation-fill-mode: forwards;
 		animation-duration: 1s;
 		opacity: 0;
-				transform: translateX(toRem(-60));
+		transform: translateX(toRem(-60));
 		display: grid;
 		grid-template-columns: auto auto;
 		column-gap: toRem(12);
@@ -146,7 +148,7 @@
 		font-size: toRem(44);
 		font-weight: 700;
 		line-height: 1.26;
-	
+
 		@include adaptiveValue("font-size", 44, 30);
 		&:not(:last-child) {
 			margin-bottom: toRem(12);
@@ -175,7 +177,7 @@
 		p:not(:last-child) {
 			margin-bottom: toRem(6);
 		}
-		&--shot{
+		&--shot {
 			max-width: toRem(600);
 			margin-inline: auto;
 		}

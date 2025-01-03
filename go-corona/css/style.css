@@ -601,40 +601,42 @@ body {
     grid-template-columns: 419fr 565fr;
   }
 }
-.hero__content-block {
-  -webkit-animation-name: hero;
-          animation-name: hero;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  opacity: 0;
-}
 @media (min-width: 46.25em) {
   .hero__content-block {
     padding-left: 1.0625rem;
+    -webkit-animation-name: hero;
+            animation-name: hero;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 3.5s;
+            animation-delay: 3.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    opacity: 0;
   }
 }
 .hero__img {
-  -webkit-animation-name: hero;
-          animation-name: hero;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  opacity: 0;
   max-width: 34.1875rem;
   width: 100%;
   aspect-ratio: 547/394;
   justify-self: center;
+}
+@media (min-width: 46.25em) {
+  .hero__img {
+    -webkit-animation-name: hero;
+            animation-name: hero;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    opacity: 0;
+  }
 }
 .hero__img img {
   width: 100%;
