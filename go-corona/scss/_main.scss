@@ -41,7 +41,7 @@ body {
 }
 @keyframes hero {
 	0% {
-		transform: translateY(toRem(40));
+		transform: translateY(toRem(10));
 		opacity: 0;
 	}
 	100% {
