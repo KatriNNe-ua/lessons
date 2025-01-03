@@ -645,20 +645,6 @@ body {
      object-fit: contain;
 }
 .hero__watch-video {
-  -webkit-animation-name: video;
-          animation-name: video;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  opacity: 0;
-  -webkit-transform: translateX(-3.75rem);
-      -ms-transform: translateX(-3.75rem);
-          transform: translateX(-3.75rem);
   display: grid;
   grid-template-columns: auto auto;
   -webkit-column-gap: 0.75rem;
@@ -671,6 +657,24 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+}
+@media (min-width: 46.25em) {
+  .hero__watch-video {
+    -webkit-animation-name: video;
+            animation-name: video;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    opacity: 0;
+    -webkit-transform: translateX(-3.75rem);
+        -ms-transform: translateX(-3.75rem);
+            transform: translateX(-3.75rem);
+  }
 }
 .hero__video-link {
   grid-row: span 2;

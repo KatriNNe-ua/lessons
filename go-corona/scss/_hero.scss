@@ -80,19 +80,21 @@
 	// .hero__watch-video
 
 	&__watch-video {
-		animation-name: video;
-		animation-timing-function: linear;
-		animation-delay: 4s;
-		animation-fill-mode: forwards;
-		animation-duration: 1s;
-		opacity: 0;
-		transform: translateX(toRem(-60));
 		display: grid;
 		grid-template-columns: auto auto;
 		column-gap: toRem(12);
 		row-gap: toRem(5);
 		align-items: end;
 		justify-content: start;
+		@media (min-width: toEm(740)) {
+			animation-name: video;
+			animation-timing-function: linear;
+			animation-delay: 4s;
+			animation-fill-mode: forwards;
+			animation-duration: 1s;
+			opacity: 0;
+			transform: translateX(toRem(-60));
+		}
 	}
 
 	// .hero__video-link
