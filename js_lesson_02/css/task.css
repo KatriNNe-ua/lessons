@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,600,700,800&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+:root {
+  --bgColor: rgb(33, 32, 32);
+  --colorText: rgb(254, 254, 254);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--bgColor);
+  color: var(--colorText);
+  font-size: 1.5625rem;
+  text-align: center;
+}
+
+[class*=__container] {
+  max-width: 87.5rem;
+  margin-inline: auto;
+  padding-inline: 0.9375rem;
+}
+
+.task {
+  padding-block: 3.125rem;
+}
+.task__title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+.task__text {
+  border-bottom: 0.0625rem solid rgba(227, 214, 23, 0.9568627451);
+  padding: 2.5rem;
+}
