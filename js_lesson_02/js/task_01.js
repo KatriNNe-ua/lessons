@@ -15,7 +15,7 @@ const numberTwo = parseFloat(prompt("Введіть друге число", ""))
 
 //Крок 2. Обчислення результатів
 const sum = numberOne + numberTwo;
-const division = numberOne / numberTwo;
+const division = (numberOne / numberTwo).toFixed(3);
 const multiply = numberOne * numberTwo;
 
 //КРОК 3. Ввиведення результатів 
