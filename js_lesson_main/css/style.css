@@ -142,6 +142,7 @@ body {
   color: var(--colorText);
   text-transform: uppercase;
   letter-spacing: 0.1875rem;
+   font-weight: 600;
 }
 
 .footer__container {
@@ -197,5 +198,4 @@ body {
   color: var(--colorText);
   text-transform: uppercase;
   letter-spacing: 0.1875rem;
-  font-weight: 600;
 }
