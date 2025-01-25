@@ -15,7 +15,7 @@ const unitPrice  = parseFloat(prompt("Введіть вартість одини
 const tax = 5;
 
 //Крок 2. Обчислення результату
-const totalCost = unitPrice * quantityOfGoods;
+const totalCost = (unitPrice * quantityOfGoods).toFixed(2);
 const taxAmount = (totalCost * tax / 100).toFixed(2);
 
 //КРОК 3. Ввиведення результатів
