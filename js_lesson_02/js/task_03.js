@@ -19,5 +19,5 @@ const totalCost = unitPrice * quantityOfGoods;
 const taxAmount = (totalCost * tax / 100).toFixed(2);
 
 //КРОК 3. Ввиведення результатів
-document.write(`Загальну вартість товару = ${totalCost} <br> <br>`);
+document.write(`Загальна вартість товару = ${totalCost} <br> <br>`);
 document.write(`ПДВ = ${taxAmount}`);
