@@ -2,17 +2,21 @@
 	padding-block: toRem(100);
 	// .homework__list
 	&__list {
-		display: flex;
-		flex-direction: column;
-		row-gap: toRem(40);
+		// display: flex;
+		// flex-direction: column;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: toRem(40);
+		
 	}
 	// .homework__link
 	&__link {
-		padding: toRem(40) toRem(20);
+		padding: toRem(40) toRem(30);
 		background-color: #8472b528;
 		width: 100%;
 		border-radius: toRem(10);
 		border: toRem(1) solid #554e4e;
+		height: 100%;
 	}
 	&__check {
 		transition: all 0.3s;
@@ -39,5 +43,19 @@
 		color: var(--colorText);
 		text-transform: uppercase;
 		letter-spacing: toRem(3);
+		margin-bottom: toRem(20);
+		text-decoration: underline;
+		text-decoration-color: #e3d5175a;
+		text-underline-offset: toRem(10);
+		text-decoration-thickness: toRem(1);
+	
+	}
+	&__text{
+	color: #d3cdcd;
+	line-height: 1.5;
+	letter-spacing: toRem(1);
+	p:not(:last-child){
+		margin-bottom: toRem(10);
+	}
 	}
 }

@@ -154,21 +154,17 @@ body {
   padding-block: 6.25rem;
 }
 .homework__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
 }
 .homework__link {
-  padding: 2.5rem 1.25rem;
+  padding: 2.5rem 1.875rem;
   background-color: rgba(132, 114, 181, 0.1568627451);
   width: 100%;
   border-radius: 0.625rem;
   border: 0.0625rem solid #554e4e;
+  height: 100%;
 }
 .homework__check {
   -webkit-transition: all 0.3s;
@@ -198,4 +194,17 @@ body {
   color: var(--colorText);
   text-transform: uppercase;
   letter-spacing: 0.1875rem;
+  margin-bottom: 1.25rem;
+  text-decoration: underline;
+  text-decoration-color: rgba(227, 213, 23, 0.3529411765);
+  text-underline-offset: 0.625rem;
+  text-decoration-thickness: 0.0625rem;
+}
+.homework__text {
+  color: #d3cdcd;
+  line-height: 1.5;
+  letter-spacing: 0.0625rem;
+}
+.homework__text p:not(:last-child) {
+  margin-bottom: 0.625rem;
 }
