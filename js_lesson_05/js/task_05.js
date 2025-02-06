@@ -4,6 +4,6 @@
 
 for (let num = 1; num <= 10; num++) {
   document.write(
-    `Product#${num}<input class="form__input" autocomplete="off" placeholder="Введіть ціну продукта" name="form[]" type="number"><br>`
+    `Product#${num}<input autocomplete="off" placeholder="Введіть ціну продукта" name="form[]" type="number"><br>`
   );
 }

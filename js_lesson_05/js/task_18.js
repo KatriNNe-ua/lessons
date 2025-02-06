@@ -5,7 +5,7 @@
 if (confirm("Почати тестування?")) {
   let dayTemperature;
   let counter = 0;
-  let allTemperature =0;
+  let allTemperature = 0;
   do {
     dayTemperature = parseInt(prompt(`Введіть сьогоднішню температуру`));
     if (isFinite(dayTemperature)) {

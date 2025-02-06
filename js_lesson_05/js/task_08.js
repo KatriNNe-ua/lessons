@@ -8,7 +8,7 @@ for (let tr = 1; tr <= 3; tr++) {
   document.write(`<tr>`);
   for (let td = 1; td <= 3; td++) {
     document.write(`<td>${numberCounter}</td>`);
-    numberCounter++;
+    ++numberCounter;
   }
   document.write(`</tr>`);
 }
