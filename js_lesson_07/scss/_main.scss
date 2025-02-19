@@ -1,0 +1,74 @@
+@use 'sass:math';
+//REM
+@function toRem($px, $current: 16) {
+	$result: math.div($px, $current) + rem;
+	@return $result;
+}
+//EM
+@function toEm($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+:root{
+--bgColor: rgb(18, 18, 18);
+--colorText: rgb(254, 254, 254);
+}
+
+body {
+	font-family: "Manrope", sans-serif;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--bgColor);
+	main {
+		flex-grow: 1;
+	}
+}
+
+[class*="__container"] {
+	max-width: toRem(1400);
+	margin-inline: auto;
+	padding-inline: toRem(15);
+}
+
+.header {
+	padding-block: toRem(30);
+		// .header__container
+		&__container {		
+			display: flex;
+			align-items: center;
+			column-gap: toRem(20);
+			justify-content: center;
+		}
+		&__img{
+			max-width: toRem(60);
+			aspect-ratio: 1;
+			width: 100%;
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		// .header__title
+		&__title {
+			font-size: toRem(50);
+			text-align: center;
+			color: var(--colorText);
+			text-transform: uppercase;
+			letter-spacing: toRem(3);
+			font-weight: 600;
+		}
+}
+.footer {
+		// .footer__container
+		&__container {
+			font-size: toRem(20);	
+			color: var(--colorText);
+		}
+}
+
+
