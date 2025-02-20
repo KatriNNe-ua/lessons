@@ -6,12 +6,12 @@
 // Кілометри у милі.
 
 function getCentimetersToInches(numCm) {
-  return (numCm * 2.54).toFixed(2);
+  return (numCm * 0.3937).toFixed(5);
 }
 function getKilogramsToPounds(numKg) {
   return (numKg * 2.20462).toFixed(5);
 }
 function getKilometersToMiles(numKm) {
-  return (numKm * 1.60934).toFixed(5);
+  return (numKm * 0.62137).toFixed(5);
 }
 
