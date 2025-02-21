@@ -868,7 +868,7 @@
 // const numUser2 = parseInt(prompt(`Number 2?`));
 
 // for (let i = Math.min(numUser1, numUser2); i >=1; i--) {
-// 	if(numUser1%i === numUser2%i){
+// 	if(numUser1%i === 0 && numUser2%i === 0){
 // 		document.write(i)
 // 		break
 // 	}
