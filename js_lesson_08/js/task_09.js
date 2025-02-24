@@ -27,12 +27,14 @@ if (confirm("Почати тестування?")) {
 alert(fieldNavalBattle);
 let userNumCell
 do {
-userNumCell = parseInt(prompt(`Введіть номер клітинки від 1 до ${userNumberCells}`));
-if(fieldNavalBattle[userNumCell-1]){
-	userCountShip--
-	alert(`Вітаю! Ви потопили корабель. Залишилось ${userCountShip} кораблів`);
-} else alert(`Промах. Залишилось ${userCountShip} кораблів`);
-} while (userCountShip);
+  userNumCell = parseInt(
+    prompt(`Введіть номер клітинки від 1 до ${userNumberCells}`)
+  );
+  if (fieldNavalBattle[userNumCell - 1]) {
+    userCountShip--;
+    alert(`Вітаю! Ви потопили корабель. Залишилось ${userCountShip} кораблів`);
+  } else alert(`Промах. Залишилось ${userCountShip} кораблів`);
+} while (userCountShip );
 
 document.write('Гра закінчилась. Ви потопили усі кораблі.')
 }
