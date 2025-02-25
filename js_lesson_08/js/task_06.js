@@ -2,14 +2,20 @@
 
 //Задача 6. Дано послідовність цін товарів та назв (у окремих масивах). Вивести на екран ті, які може собі дозволити користувач (кількість грошей задається).
 if (confirm("Почати тестування?")) {
+  function getProductsUserCan(arrPrices, arrTitles, userMoney) {
+    let productsForUser = [];
+    for (let i = 0; i < arrPrices.length; i++) {
+      if (arrPrices[i] <= userMoney) productsForUser.push(arrTitles[i]);
+    }
+	return productsForUser
+  }
   let productsPrices = [1000, 20, 31];
   let productsTitles = ["cheese", "juice", "bread"];
-  let productsForUser = []
-
-  const userMoney = 40
-  for(let i =0; i<productsPrices.length;i++){
-	if(productsPrices[i]<=userMoney) productsForUser.push(productsTitles[i])
-  }
-document.write(`Користувач може собі дозволити: ${productsForUser}`);
+  const userMoney = 40;
+  let productsForUser = getProductsUserCan(
+    productsPrices,
+    productsTitles,
+    userMoney
+  );
+  document.write(`Користувач може собі дозволити: ${productsForUser}`);
 }
-

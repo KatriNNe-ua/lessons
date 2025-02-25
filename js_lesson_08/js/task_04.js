@@ -34,6 +34,6 @@ if (confirm("Почати тестування?")) {
     if (listCarNumbers[i].length > 5) countMore5Characters++;
   }
   document.write(
-    `Кількість номерів, які починаються на букву «А»: ${countBeginLetterA}.<br>Кількість номерів, у яких перша і остання літери співпадають: ${countFirstLastLettersMatch}.<br>Кількість номерів які складаються з більше ніш 5 символів: ${countMore5Characters}. `
+    `Кількість номерів, які починаються на букву «А»: ${countBeginLetterA}.<br>Кількість номерів, у яких перша і остання літери співпадають: ${countFirstLastLettersMatch}.<br>Кількість номерів які складаються з більше ніж 5 символів: ${countMore5Characters}. `
   );
 }

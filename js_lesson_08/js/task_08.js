@@ -13,22 +13,27 @@ if (confirm("Почати тестування?")) {
     }
     return newArr;
   }
-
-  const userCountArr = parseInt(prompt("Яка кількість номерів елементів?"));
-  const winArr = getArr(userCountArr, -500, 500);
-  let winTotal = 0;
-  let userChoose;
-  do {
-    userChoose = parseInt(prompt(`Ви бажаете вибирати номер від 1 до ${userCountArr}`));
-    if (userChoose > 0 && userChoose <= userCountArr) {
-      winTotal += winArr[userChoose - 1];
-      alert(
-        `Ви одержали: ${
-          winArr[userChoose - 1]
-        }. Ваш сумарний виграш: ${winTotal}`
+  function playGame(countEl, min, max) {
+    const winArr = getArr(countEl, min, max);
+    let winTotal = 0;
+    let userChoose;
+    do {
+      userChoose = parseInt(
+        prompt(`Ви бажаєте вибирати номер від 1 до ${countEl}`)
       );
-    }
-  } while (userChoose);
+      if (userChoose > 0 && userChoose <= countEl) {
+        winTotal += winArr[userChoose - 1];
+        alert(
+          `Ви одержали: ${
+            winArr[userChoose - 1]
+          }. Ваш сумарний виграш: ${winTotal}`
+        );
+      }
+    } while (userChoose);
+    return winTotal;
+  }
 
-document.write(`Ваш сумарний вийграш: ${winTotal}`);
+  const userCountArr = parseInt(prompt("Яка кількість елементів?"));
+  const userSumWinTotal = playGame(userCountArr, -500, 500);
+  document.write(`Ваш сумарний виграш: ${userSumWinTotal}`);
 }

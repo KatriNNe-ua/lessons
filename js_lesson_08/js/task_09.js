@@ -12,29 +12,34 @@ if (confirm("Почати тестування?")) {
       newArr.push(0);
     }
     for (let k = 0; k < countShip; k++) {
-      let idex = Math.floor(Math.random() * countCell );
+      let idex = Math.floor(Math.random() * countCell);
       if (newArr[idex] === 0) newArr[idex] = 1;
       else k--;
     }
     return newArr;
   }
+
+  function playGameNavalBattle(countCell, countShip) {
+    const fieldNavalBattle = getArrNavalBattle(countCell, countShip);
+	alert(fieldNavalBattle);
+    let userNumCell;
+    do {
+      userNumCell = parseInt(
+        prompt(`Введіть номер клітинки від 1 до ${countCell}`)
+      );
+      if (fieldNavalBattle[userNumCell - 1]) {
+        countShip--;
+        fieldNavalBattle[userNumCell - 1] = 0;
+        alert(`Вітаю! Ви потопили корабель. Залишилось ${countShip} кораблів`);
+      } else alert(`Промах. Залишилось ${countShip} кораблів`);
+    } while (countShip);
+    return "Гра закінчилась. Ви потопили усі кораблі.";
+  }
+
   const userNumberCells = parseInt(
     prompt("Введіть кількість клітинок для морського бою")
   );
-  let userCountShip = parseInt(prompt("Введіть кількість кораблів"));
-
-  const fieldNavalBattle = getArrNavalBattle(userNumberCells, userCountShip)
-alert(fieldNavalBattle);
-let userNumCell
-do {
-  userNumCell = parseInt(
-    prompt(`Введіть номер клітинки від 1 до ${userNumberCells}`)
-  );
-  if (fieldNavalBattle[userNumCell - 1]) {
-    userCountShip--;
-    alert(`Вітаю! Ви потопили корабель. Залишилось ${userCountShip} кораблів`);
-  } else alert(`Промах. Залишилось ${userCountShip} кораблів`);
-} while (userCountShip );
-
-document.write('Гра закінчилась. Ви потопили усі кораблі.')
+  const userCountShip = parseInt(prompt("Введіть кількість кораблів"));
+  const gameNavalBattle = playGameNavalBattle(userNumberCells, userCountShip);
+  document.write(gameNavalBattle);
 }

@@ -2,10 +2,15 @@
 
 //Задача 3. Дано масив імен учнів. З’ясувати скільки разів зустрічається ім’я «Іван».
 if (confirm("Почати тестування?")) {
-  const listNumeStudent = ["Максим", "Іван", "Іван", "Евген", "Іван"];
-  let count = 0;
-  for (let i = 0; i < listNumeStudent.length; i++) {
-    if (listNumeStudent[i] === "Іван") count++;
+  function getCountName(arrName, name) {
+    let count = 0;
+    for (let i = 0; i < arrName.length; i++) {
+      if (arrName[i] === name) count++;
+    }
+    return count;
   }
-  document.write(`${count} раз(ів) зустрічається ім’я «Іван»`);
+  const listNumeStudent = ["Максим", "Іван", "Іван", "Евген", "Іван"];
+  const countName = getCountName(listNumeStudent, "Іван");
+
+  document.write(`${countName} раз(ів) зустрічається ім’я «Іван»`);
 }

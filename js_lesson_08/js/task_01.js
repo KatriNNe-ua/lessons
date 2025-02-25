@@ -16,18 +16,21 @@ if (confirm("Почати тестування?")) {
 
   function getCategory(arrGrades) {
     let res;
-    let double = false;
+    let two = false;
+    let three = false;
     let good = false;
-    let triple = false;
 
     for (let i = 0; i < arrGrades.length; i++) {
-      if (arrGrades[i] <= 3) double = true;
-      else if (arrGrades[i] <= 6) triple = true;
+      if (arrGrades[i] <= 3){
+		two = true;
+		break
+	  } 
+      else if (arrGrades[i] <= 6) three = true;
       else if (arrGrades[i] <= 9) good = true;
     }
 
-    if (double) res = "двійочник";
-    else if (triple) res = "трійочник";
+    if (two) res = "двійочник";
+    else if (three) res = "трійочник";
     else if (good) res = "хорошист";
     else res = "відмінник";
     return res;
@@ -35,6 +38,8 @@ if (confirm("Почати тестування?")) {
 
   const gradesSubjects = [8, 6, 8, 8, 10, 11, 9, 7];
   const averageGradeSubjects = getAverageGrade(gradesSubjects).toFixed(2);
-  const category = getCategory(gradesSubjects)
-  document.write(`Середній бал: ${averageGradeSubjects}.<br> Учень відноситься до категорії: ${category}`);
+  const category = getCategory(gradesSubjects);
+  document.write(
+    `Середній бал: ${averageGradeSubjects}.<br> Учень відноситься до категорії: ${category}`
+  );
 }
