@@ -11,9 +11,7 @@ if (confirm("Почати тестування?")) {
     return arrName;
   }
   function createListWiThFirstLettername(arr) {
-    const arrFirstLetter = arr.map((el) => {
-      return el[0];
-    });
+    const arrFirstLetter = arr.map((el) => el[0] );
     return arrFirstLetter;
   }
     const userLengthListName = parseInt(
