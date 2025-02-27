@@ -18,7 +18,7 @@ if (confirm("Почати тестування?")) {
     discount = 0.3
   ) {
     arrPrice.forEach((num, index, array) => {
-      if (num > numCompare) array[index] = num * (1 - discount);
+      if (num > numCompare) array[index]  *= (1 - discount);
     });
     return arrPrice;
   }

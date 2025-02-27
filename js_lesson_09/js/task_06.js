@@ -12,7 +12,7 @@ if (confirm("Почати тестування?")) {
   }
   function getArrayMoreThanFirstElementMultiply(arrElement, numMultiply = 2) {
     arrElement.forEach((num, index, array) => {
-      if (num > array[0]) array[index] = num * numMultiply;
+      if (num > array[0]) array[index] *= numMultiply;
     });
     return arrElement;
   }
