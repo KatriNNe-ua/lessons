@@ -156,18 +156,20 @@ if (confirm("Почати тестування?")) {
     200
   );
   document.write(
-    `<p>6) Загальний список (одновимірний масив) зі значенням, які що більші за 200: ${listGreater200}</p>`
+    `<p>6) Загальний список (одновимірний масив) зі значенням, які що більші за 200:<br> ${listGreater200}</p>`
   );
 
   //====================================================================================
   // 7) відсортувати кожен тиждень за зростанням
-  const profitStoresDuringWeek2 = JSON.parse(
-    JSON.stringify(profitStoresDuringWeek)
-  );
+
   function getArrSortWeekAscending(arrProfit) {
     arrProfit.forEach((shop) => shop.sort((a, b) => a - b)); //якщо б потрібно створити новий масив, то використала метод map()
     return arrProfit;
   }
+
+  const profitStoresDuringWeek2 = JSON.parse(
+    JSON.stringify(profitStoresDuringWeek)
+  );
   getArrSortWeekAscending(profitStoresDuringWeek2);
   document.write(
     `<p>7) Відсортувати кожен тиждень за зростанням:<br> ${profitStoresDuringWeek.join(
@@ -177,14 +179,15 @@ if (confirm("Почати тестування?")) {
   //====================================================================================
   // 8) відсортувати тижні (рядки) за спаданням максимального елементи у цьому тижні (рядку),
   // тобто при порівнянні рядків потрібно порівнювати максимальні елементи у кожному з цих рядків
-  const profitStoresDuringWeek3 = JSON.parse(
-    JSON.stringify(profitStoresDuringWeek)
-  );
 
   function getArrSortWeekDescendingMaxElement(arrProfit) {
     arrProfit.sort((shop1, shop2) => Math.max(...shop2) - Math.max(...shop1));
     return arrProfit;
   }
+
+  const profitStoresDuringWeek3 = JSON.parse(
+    JSON.stringify(profitStoresDuringWeek)
+  );
   getArrSortWeekDescendingMaxElement(profitStoresDuringWeek3);
   document.write(
     `<p>8) Відсортувати тижні (рядки) за спаданням максимального елементи у цьому тижні (рядку),
@@ -197,9 +200,6 @@ if (confirm("Почати тестування?")) {
   // 9) упорядкувати тижні (рядки) за спаданням суми елементів у рядку
   //(тобто при порівнянні двох рядків треба знайти суму кожного з рядків і порівнювати ці суми,
   // на основі цих сум буде зрозуміло, який з елементів повинен іти раніше).
-  const profitStoresDuringWeek4 = JSON.parse(
-    JSON.stringify(profitStoresDuringWeek)
-  );
 
   function getArrSortWeekDescendingSumElement(arrProfit) {
     arrProfit.sort(
@@ -209,6 +209,10 @@ if (confirm("Почати тестування?")) {
     );
     return arrProfit;
   }
+
+  const profitStoresDuringWeek4 = JSON.parse(
+    JSON.stringify(profitStoresDuringWeek)
+  );
   getArrSortWeekDescendingSumElement(profitStoresDuringWeek4);
   document.write(
     `<p>9) Упорядкувати тижні (рядки) за спаданням суми елементів у рядку(тобто при порівнянні двох рядків треба знайти суму кожного з рядків і порівнювати ці суми, на основі цих сум буде зрозуміло, який з елементів повинен іти раніше).:<br> ${profitStoresDuringWeek3.join(
