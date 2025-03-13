@@ -40,7 +40,7 @@ if (confirm("Почати тестування?")) {
   document.write(`<p>Початковий масив: ${namesList}</p>`);
   const namesListCopy = [...namesList];
   const namesListSort = getSortАscendingArr(namesListCopy);
-  document.write(`<p>Відсортований масив: ${namesListSort}</p>`);
+  document.write(`<p>Відсортований масив в алфавітному порядку: ${namesListSort}</p>`);
   const nameSearch = "Olga";
   const resInd = getIndexNameFromArr(namesListSort, nameSearch);
   if (resInd >= 0)
