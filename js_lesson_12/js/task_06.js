@@ -41,7 +41,9 @@ if (confirm("Почати тестування?")) {
   document.write(`<p>Початковий масив: ${namesList}</p>`);
   const namesListCopy = [...namesList];
   const namesListSort = getSortАscendingArrByLength(namesListCopy);
-  document.write(`<p>Відсортований масив за довжиною імен: ${namesListSort}</p>`);
+  document.write(
+    `<p>Відсортований масив за довжиною імен: ${namesListSort}</p>`
+  );
   const nameLength = 5;
   const resInd = getIndexNameLenghtFromArr(namesListSort, nameLength);
   if (resInd >= 0)

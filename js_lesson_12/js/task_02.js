@@ -56,8 +56,9 @@ if (confirm("Почати тестування?")) {
   const myArr = createArr(30, 1, 10);
   document.write(`${myArr}<br>`);
 
-  const res = getCocktailShakerSortArrCountExchangesCountComparisonsNum(myArr);
+  const [arrSort, countExchanges, countComparisons] =
+    getCocktailShakerSortArrCountExchangesCountComparisonsNum(myArr);
   document.write(
-    `${res[0]}<br>Кількість обмінів: ${res[1]}<br>Кількість порівнянь: ${res[2]} `
+    `${arrSort}<br>Кількість обмінів: ${countExchanges}<br>Кількість порівнянь: ${countComparisons} `
   );
 }
