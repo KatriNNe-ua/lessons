@@ -63,6 +63,7 @@ if (confirm("Почати тестування?")) {
       if (num < 0) throw new Error(`Не можна збільшувати на від'ємне число`);
       this.Month = ((this.Month + num - 1) % 12) + 1;
       // this.Month  = Math.min( this.Month  + num, 12);
+	  this.Day = Math.min(this.Day, this.getNumDayInMonth());
     }
     decreasingMonth(num) {
       if (num < 0) throw new Error(`Не можна зменшувати на від'ємне число`);
@@ -71,15 +72,18 @@ if (confirm("Почати тестування?")) {
         this.Month = 12 - (((num - this.Month - 1) % 12) + 1);
         // this.Month  = Math.max(this.Month  - num, 1);
       }
+	  this.Day = Math.min(this.Day, this.getNumDayInMonth());
     }
     //------------------------------------
     increasingYear(num) {
       if (num < 0) throw new Error(`Не можна збільшувати на від'ємне число`);
       this.Year += num;
+	  this.Day = Math.min(this.Day, this.getNumDayInMonth());
     }
     decreasingYear(num) {
       if (num < 0) throw new Error(`Не можна зменшувати на від'ємне число`);
       this.Year -= num;
+	  this.Day = Math.min(this.Day, this.getNumDayInMonth());
     }
     //------------------------------------
     toString() {
