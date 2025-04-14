@@ -1,0 +1,80 @@
+.finds-average__container {
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.finds-average__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 30px;
+}
+.finds-average__input {
+  border: 1px solid rgba(227, 214, 23, 0.9568627451);
+  max-width: 100px;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.finds-average__input:hover {
+  background-color: #2b2b2b;
+}
+.finds-average__input:focus-visible {
+  background-color: #2b2b2b;
+  border: 1px solid rgba(227, 214, 23, 0.9568627451);
+  outline: 1px solid rgba(227, 214, 23, 0.9568627451);
+}
+.finds-average__button {
+  margin-block: 20px;
+  width: 100%;
+  font-size: 25px;
+  background-color: rgba(199, 191, 77, 0.4862745098);
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 10px;
+}
+.finds-average__button:hover {
+  background-color: rgba(227, 213, 23, 0.6235294118);
+}
+.finds-average__button:focus-visible {
+  outline: 1px solid rgba(227, 214, 23, 0.9568627451);
+  background-color: rgba(227, 213, 23, 0.6235294118);
+}
+
+.input-rating {
+  margin: 10px 0;
+  border: 1px solid rgba(227, 214, 23, 0.9568627451);
+  max-width: 150px;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.input-rating:hover {
+  background-color: #2b2b2b;
+}
+.input-rating:focus-visible {
+  background-color: #2b2b2b;
+  border: 1px solid rgba(227, 214, 23, 0.9568627451);
+  outline: 1px solid rgba(227, 214, 23, 0.9568627451);
+}

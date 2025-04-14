@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/task.css">
+	<link rel="stylesheet" href="css/task7.css">
+
+	<title>Task 07</title>
+</head>
+
+<body>
+	<section class="task">
+		<div class="task__container">
+			<h1 class="task__title">Задача #7</h1>
+			<div class="task__text">
+				<p>Подорож складається з 3 етапів. На кожному етапі користувач може вибрати один з видів транспорту
+					(авто, автобус,
+					літак - випадаючий список), харчування (сніданок, обід, вечеря – checkbоx) та одного з 3-х
+					гідів(використати -
+					radio buttons). Ціни визначте самі. Підрахувати загальну вартість.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="trip">
+		<div class="trip__container">
+			<h2 class="trip__title">travel</h2>
+			<div class="trip__wrapper">
+
+				<!-- Етап 1 -->
+				<div class="trip__item">
+					<h3 class="trip__sub-title">1 етап</h3>
+					<select name="transport1" class="trip__transport">
+						<option value="100">Авто (100 грн)</option>
+						<option value="50">Автобус (50 грн)</option>
+						<option value="200">Літак (200 грн)</option>
+					</select>
+
+					<div class="trip__meals meals">
+						<h4 class="meals__title">Сніданок</h4>
+						<div class="meals__input">
+							<input class="meals__food"  type="checkbox" id="b1" name="breakfast1" value="30">
+							<label for="b1">Каша з фруктами (30 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food"  type="checkbox" id="b2" name="breakfast1" value="40">
+							<label for="b2">Яєчня з тостом (40 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="b3" name="breakfast1" value="50">
+							<label for="b3">Омлет з овочами (50 грн)</label>
+						</div>
+
+						<h4 class="meals__title">Обід</h4>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="l1" name="lunch1" value="60">
+							<label for="l1">Борщ з пампушками (60 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="l2" name="lunch1" value="70">
+							<label for="l2">Котлета з пюре (70 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="l3" name="lunch1" value="80">
+							<label for="l3">Плов (80 грн)</label>
+						</div>
+
+						<h4 class="meals__title">Вечеря</h4>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="d1" name="dinner1" value="50">
+							<label for="d1">Паста з соусом (50 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="d2" name="dinner1" value="60">
+							<label for="d2">Салат з куркою (60 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="d3" name="dinner1" value="70">
+							<label for="d3">Запечена риба з овочами (70 грн)</label>
+						</div>
+					</div>
+
+					<div class="trip__guides guides">
+						<h4>Гід</h4>
+						<div class="guides__inner">
+							<div class="guides__item">
+								<input class="guides__input" type="radio" id="g1-1" name="guide1" value="100">
+								<label for="g1-1">Іван (100 грн)</label>
+							</div>
+							<div class="guides__item">
+								<input class="guides__input" type="radio" id="g1-2" name="guide1" value="150">
+								<label for="g1-2">Олена (150 грн)</label>
+							</div>
+							<div class="guides__item">
+								<input class="guides__input" type="radio" id="g1-3" name="guide1" value="200">
+								<label for="g1-3">Михайло (200 грн)</label>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Етап 2 -->
+				<div class="trip__item">
+					<h3 class="trip__sub-title">2 етап</h3>
+					<select name="transport2" class="trip__transport">
+						<option value="90">Авто (90 грн)</option>
+						<option value="40">Автобус (40 грн)</option>
+						<option value="180">Літак (180 грн)</option>
+					</select>
+
+					<div class="trip__meals meals">
+						<h4 class="meals__title">Сніданок</h4>
+						<div class="meals__input">
+							<input class="meals__food"  type="checkbox" id="b4" name="breakfast2" value="25">
+							<label for="b4">Млинці з медом (25 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="b5" name="breakfast2" value="35">
+							<label for="b5">Сирники зі сметаною (35 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="b6" name="breakfast2" value="45">
+							<label for="b6">Тост з авокадо (45 грн)</label>
+						</div>
+
+						<h4 class="meals__title">Обід</h4>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="l4" name="lunch2" value="65">
+							<label  for="l4">Суп-пюре з грибами (65 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="l5" name="lunch2" value="75">
+							<label  for="l5">Гречка з куркою (75 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="l6" name="lunch2" value="85">
+							<label  for="l6">Лазанья (85 грн)</label>
+						</div>
+
+						<h4 class="meals__title">Вечеря</h4>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="d4" name="dinner2" value="55">
+							<label for="d4">Піца (55 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="d5" name="dinner2" value="65">
+							<label for="d5">Ризотто (65 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="d6" name="dinner2" value="75">
+							<label for="d6">Салат Цезар (75 грн)</label>
+						</div>
+					</div>
+
+					<div class="trip__guides guides">
+						<h4>Гід</h4>
+						<div class="guides__inner">
+							<div class="guides__item">
+								<input class="guides__input" type="radio" id="g2-1" name="guide2" value="110">
+								<label for="g2-1">Наталя (110 грн)</label>
+							</div>
+
+							<div class="guides__item">
+								<input class="guides__input" type="radio" id="g2-2" name="guide2" value="160">
+								<label for="g2-2">Андрій (160 грн)</label>
+							</div>
+							<div class="guides__item">
+								<input class="guides__input" type="radio" id="g2-3" name="guide2" value="210">
+								<label for="g2-3">Софія (210 грн)</label>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+				<!-- Етап 3 -->
+				<div class="trip__item">
+					<h3 class="trip__sub-title">3 етап</h3>
+					<select name="transport3" class="trip__transport">
+						<option value="80">Авто (80 грн)</option>
+						<option value="60">Автобус (60 грн)</option>
+						<option value="170">Літак (170 грн)</option>
+					</select>
+
+					<div class="trip__meals meals">
+						<h4 class="meals__title">Сніданок</h4>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="b7" name="breakfast3" value="28">
+							<label for="b7">Круасан з кавою (28 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="b8" name="breakfast3" value="38">
+							<label for="b8">Гранола з йогуртом (38 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="b9" name="breakfast3" value="48">
+							<label for="b9">Панкейки з сиропом (48 грн)</label>
+						</div>
+
+						<h4 class="meals__title">Обід</h4>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="l7" name="lunch3" value="66">
+							<label for="l7">Рагу з овочів (66 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="l8" name="lunch3" value="76">
+							<label for="l8">Курячі крильця з соусом (76 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="l9" name="lunch3" value="86">
+							<label for="l9">Кесадилья (86 грн)</label>
+						</div>
+
+						<h4 class="meals__title">Вечеря</h4>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="d7" name="dinner3" value="52">
+							<label for="d7">Суші-сет (52 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="d8" name="dinner3" value="62">
+							<label for="d8">Курячий стейк (62 грн)</label>
+						</div>
+						<div class="meals__input">
+							<input class="meals__food" type="checkbox" id="d9" name="dinner3" value="72">
+							<label for="d9">М'ясна тарілка (72 грн)</label>
+						</div>
+					</div>
+
+					<div class="trip__guides guides">
+						<h4>Гід</h4>
+						<div class="guides__inner">
+							<div class="guides__item">
+								<input class="guides__input" type="radio" id="g3-1" name="guide3" value="120">
+								<label for="g3-1">Петро (120 грн)</label>
+							</div>
+							<div class="guides__item">
+									<input class="guides__input" type="radio" id="g3-2" name="guide3" value="170">
+									<label for="g3-2">Ірина (170 грн)</label>
+							</div>
+							<div class="guides__item">
+								<input class="guides__input" type="radio" id="g3-3" name="guide3" value="220">
+								<label for="g3-3">Тарас (220 грн)</label></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="trip__cost">
+				<button class="trip__btn" type="button" id="cost">Підрахувати загальну вартість</button>
+				<p id="result"></p>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/task_07.js"> </script>
+</body>
+
+</html>

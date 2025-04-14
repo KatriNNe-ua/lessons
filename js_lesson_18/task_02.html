@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/task.css">
+	<link rel="stylesheet" href="css/task2.css">
+
+	<title>Task 02</title>
+</head>
+
+<body>
+	<section class="task">
+		<div class="task__container">
+			<h1 class="task__title">Задача #2</h1>
+			<div class="task__text">
+				<p>Зробити конвертер валют (курси валют – константи у скрипті)
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="converter">
+		<div class="converter__container">
+			<div class="converter__grn">
+				<label for="grn">Сума в гривнях:</label>
+				<input class="converter__input" type="number" id="grn" placeholder="Введіть число">
+			</div>
+			<button class="btn">Конвертувати</button>
+			<div class="converter__wrapper">
+				<div class="converter__euros">
+					<p>Сума в євро</p>
+					<p id="euros" class="converter__result">0</p>
+				</div>
+				<div class="converter__dollars">
+					<p>Сума в доларах</p>
+					<p id="dollars" class="converter__result">0</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/task_02.js"> </script>
+</body>
+
+</html>

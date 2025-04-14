@@ -1,0 +1,38 @@
+.user-age {
+	// .user-age__container
+	&__container {
+		max-width: 500px;
+	}
+	// .user-age__wrapper
+	&__wrapper {
+		padding-bottom: 10px;
+	}
+	// .user-age__determine
+	&__determine {
+		display: flex;
+		flex-direction: column;
+	 gap: 20px;
+	}
+	&__input {
+		margin-top: 10px;
+		border: 1px solid #e3d617f4;
+
+		border-radius: 5px;
+		padding: 5px;
+		transition: all 0.3s;
+		max-width: 250px;
+		font-size: 18px;
+		&:hover {
+			background-color: #2b2b2b;
+		}
+		&:focus-visible {
+			background-color: #2b2b2b;
+			border: 1px solid #e3d617f4;
+			outline: 1px solid #e3d617f4;
+		}
+	}
+}
+#age{
+	color: #e3d617f4;
+	font-size: 40px;
+}

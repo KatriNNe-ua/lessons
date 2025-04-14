@@ -1,0 +1,113 @@
+.trip__title {
+  font-size: 60px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(227, 214, 23, 0.9568627451);
+  padding-bottom: 40px;
+  text-shadow: 0px 0px 9px rgba(227, 214, 23, 0.9568627451);
+}
+.trip__wrapper {
+  padding-block: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-bottom: 1px solid rgba(227, 214, 23, 0.9568627451);
+}
+.trip__item {
+  max-width: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.trip__sub-title {
+  font-size: 30px;
+  color: rgba(227, 214, 23, 0.9568627451);
+}
+.trip__transport {
+  padding: 5px;
+  max-width: 50%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.trip__meals {
+  padding-block: 10px;
+  border-bottom: 1px solid rgba(227, 214, 23, 0.9568627451);
+  border-top: 1px solid rgba(227, 214, 23, 0.9568627451);
+}
+.trip__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  gap: 8px;
+}
+.trip__cost {
+  padding-block: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.trip__cost p {
+  font-size: 40px;
+  color: rgba(227, 214, 23, 0.9568627451);
+}
+.trip__btn {
+  padding: 15px;
+  max-width: 100%;
+  font-size: 25px;
+  background-color: rgba(199, 191, 77, 0.4862745098);
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.trip__btn:hover {
+  background-color: rgba(227, 213, 23, 0.6235294118);
+}
+.trip__btn:focus-visible {
+  outline: 1px solid rgba(227, 214, 23, 0.9568627451);
+  background-color: rgba(227, 213, 23, 0.6235294118);
+}
+
+.meals__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  gap: 8px;
+}
+.meals__input input {
+  width: 20px;
+  aspect-ratio: 1;
+}
+
+.guides__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 14px;
+  gap: 8px;
+}
+.guides__inner input {
+  width: 20px;
+  aspect-ratio: 1;
+}

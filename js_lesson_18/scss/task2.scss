@@ -1,0 +1,73 @@
+.converter {
+		// .converter__container
+		&__container {
+				max-width: 500px;
+		}
+		// .converter__grn
+		&__grn {
+			display: grid;
+		grid-template-columns: 1fr 1fr ;
+		font-size: 20px;
+		column-gap: 10px;
+		padding-bottom: 20px;
+		align-items: center;
+		}
+		// .converter__input
+		&__input {
+			border: 1px solid #e3d617f4;
+
+		border-radius: 5px;
+		padding: 5px;
+		transition: all 0.3s;
+		&:hover {
+			background-color: #2b2b2b;
+		}
+		&:focus-visible {
+			background-color: #2b2b2b;
+			border: 1px solid #e3d617f4;
+			outline: 1px solid #e3d617f4;
+		}
+	}
+		
+		// .converter__wrapper
+		&__wrapper {
+			padding-top: 20px;
+				display: grid;
+		grid-template-columns: 1fr 1fr;
+		font-size: 20px;
+		column-gap: 10px;
+		}
+		// .converter__euros
+		&__euros {
+
+		}
+		// .converter__dollars
+		&__dollars {
+		}
+		&__result{
+		margin-top: 5px;
+		border: 1px solid #e3d617f4;
+		border-radius: 5px;
+		padding: 10px 5px;
+		}
+
+}
+.btn {
+width: 100%;
+		padding: 10px;
+		max-width: 100%;
+		font-size: 25px;
+		background-color: #c7bf4d7c;
+		border-radius: 5px;
+		transition: all 0.3s;
+
+		&:hover {
+			background-color: #e3d5179f;
+		}
+		&:focus-visible {
+			outline: 1px solid #e3d617f4;
+			background-color: #e3d5179f;
+		}
+	
+	}
+

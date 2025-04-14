@@ -1,0 +1,39 @@
+.user-age__container {
+  max-width: 500px;
+}
+.user-age__wrapper {
+  padding-bottom: 10px;
+}
+.user-age__determine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.user-age__input {
+  margin-top: 10px;
+  border: 1px solid rgba(227, 214, 23, 0.9568627451);
+  border-radius: 5px;
+  padding: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  max-width: 250px;
+  font-size: 18px;
+}
+.user-age__input:hover {
+  background-color: #2b2b2b;
+}
+.user-age__input:focus-visible {
+  background-color: #2b2b2b;
+  border: 1px solid rgba(227, 214, 23, 0.9568627451);
+  outline: 1px solid rgba(227, 214, 23, 0.9568627451);
+}
+
+#age {
+  color: rgba(227, 214, 23, 0.9568627451);
+  font-size: 40px;
+}
