@@ -26,10 +26,16 @@ function getAverageValue() {
   const listRating = document.querySelectorAll(".input-rating");
   if (listRating.length > 0) {
     let sum = 0;
+    //якщо user не заповне всі поля вводжу зміну count
+    let count = 0;
     for (const rating of listRating) {
-      sum += parseInt(rating.value);
+      if (rating.value) {
+        count++;
+        sum += parseInt(rating.value);
+      }
     }
-    const aver = sum / listRating.length;
+    //без count:  const aver = sum / listRating.length
+    const aver = sum / count;
     const el = document.querySelector(".finds-average__container ");
     if (el) {
       const p = document.createElement("p");

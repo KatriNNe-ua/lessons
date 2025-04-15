@@ -23,4 +23,5 @@ function getTable(rowNum, colomnNum, min=0, max=10){
 el.after(table);
 	  }
 }
+
 getTable(3,4);
