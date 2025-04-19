@@ -1,0 +1,71 @@
+.athletes {
+	max-width: 800px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+.general-list {
+	padding: 8px;
+	border: 2px solid #e3d517cb;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	min-height: 600px;
+}
+.athlete-item {
+	display: flex;
+	justify-content: space-between;
+	border: 2px solid #e3d51770;
+	padding: 5px;
+	
+}
+.competition-list {
+	padding: 8px;
+	border: 2px solid #e3d517cb;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.img-block-green {
+		max-width: 45px;
+		width: 100%;
+		aspect-ratio: 1;
+		position: relative;
+			cursor: pointer;
+		&::before{
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url('../img/arrow-green.png') center center/cover no-repeat;
+			z-index: 2;
+		
+	
+		}
+	
+
+	}
+		
+	.img-block-red {
+			cursor: pointer;
+		max-width: 45px;
+		width: 100%;
+		aspect-ratio: 1;
+		position: relative;
+		&::before{
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url('../img/arrow-red.png') center center/cover no-repeat;
+			z-index: 2;
+	
+		}
+		
+
+	}

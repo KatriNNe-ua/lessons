@@ -1,0 +1,120 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,600,700,800&display=swap");
+@import "_reset.scss";
+//REM
+@function toRem($px, $current: 16) {
+	$result: math.div($px, $current) + rem;
+	@return $result;
+}
+//EM
+@function toEm($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+:root {
+	--bgColor: rgb(33, 32, 32);
+	--colorText: rgb(254, 254, 254);
+}
+
+body {
+	font-family: "Manrope", sans-serif;
+	background-color: var(--bgColor);
+	color: var(--colorText);
+	font-size: toRem(25);
+	text-align: center;
+	line-height: 1.5;
+	letter-spacing: toRem(1);
+}
+
+[class*="__container"] {
+	max-width: toRem(1400);
+	margin-inline: auto;
+	padding-inline: toRem(15);
+}
+.task {
+	padding-block: toRem(50);
+
+	// .task__title
+	&__title {
+		font-size: toRem(40);
+		text-transform: uppercase;
+		letter-spacing: toRem(3);
+		font-weight: 600;
+		margin-bottom: toRem(40);
+	}
+	&__text {
+		border-bottom: toRem(1) solid #e3d617f4;
+		padding: toRem(40);
+	}
+}
+button {
+	padding: toRem(20) toRem(40);
+	border: toRem(1) solid #e3d617f4;
+}
+.text {
+	cursor: pointer;
+}
+
+.table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	border: 3px solid #000;
+	background-color: #4f4848;
+}
+
+td {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #000;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 18px;
+	font-weight: bold;
+}
+.table-list {
+	margin: 0 auto;
+	max-width: 650px;
+	display: flex;
+	gap: 30px;
+	justify-content: space-between;
+	h2 {
+		font-size: 16px;
+		color: #e3d617f4;
+		padding-bottom: 20px;
+		span {
+			margin: 0 auto;
+			display: block;
+			font-size: 20px;
+			color: #fffffff4;
+			max-width: 40px;
+			width: 100%;
+			text-align: center;
+			
+		}
+	}
+}
+.list-img {
+
+		// .list-img__wrapper
+		&__wrapper {
+			
+			display: flex;
+			gap: 20px;
+			justify-content: center;
+		}
+		// .list-img__item
+		&__item {
+			border: 5px solid rgb(1, 1, 1);
+			max-width: 150px;
+			width: 100%;
+			aspect-ratio: 1/2;
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.border-green{
+			border: 5px solid rgb(10, 186, 10) ;
+		}
+}

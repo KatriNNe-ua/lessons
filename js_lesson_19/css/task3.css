@@ -1,0 +1,33 @@
+.ol-list__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.ol-list__wrapper li {
+  list-style: decimal;
+}
+.ol-list__wrapper li::marker {
+  color: rgba(227, 214, 23, 0.9568627451);
+  font-size: 16px;
+}
+
+.btn {
+  max-width: 250px;
+  margin-block: 20px;
+  width: 100%;
+  font-size: 25px;
+  background-color: rgba(199, 191, 77, 0.4862745098);
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 10px;
+}
+.btn:hover {
+  background-color: rgba(227, 213, 23, 0.6235294118);
+}

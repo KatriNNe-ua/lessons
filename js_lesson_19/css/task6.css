@@ -1,0 +1,81 @@
+.athletes {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.general-list {
+  padding: 8px;
+  border: 2px solid rgba(227, 213, 23, 0.7960784314);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  min-height: 600px;
+}
+
+.athlete-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 2px solid rgba(227, 213, 23, 0.4392156863);
+  padding: 5px;
+}
+
+.competition-list {
+  padding: 8px;
+  border: 2px solid rgba(227, 213, 23, 0.7960784314);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.img-block-green {
+  max-width: 45px;
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+  cursor: pointer;
+}
+.img-block-green::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/arrow-green.png") center center/cover no-repeat;
+  z-index: 2;
+}
+
+.img-block-red {
+  cursor: pointer;
+  max-width: 45px;
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+}
+.img-block-red::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/arrow-red.png") center center/cover no-repeat;
+  z-index: 2;
+}
