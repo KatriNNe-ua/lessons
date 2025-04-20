@@ -3,11 +3,12 @@
 //Задача 1. Дано 10 рядків тексту «Hello!» у окремих div.
 //  При кліку на якийсь із них усі наступні повинні бути зафарбовані у червоний колір.
 
-const containerText = document.querySelector(".text");
+const containerText = document.querySelector(".test");
 if (containerText){
   containerText.addEventListener("click", (event) => {
-    if (event.target.tagName === "DIV") {
-      changeColor(event.target);
+	const el = event.target.closest(".text")
+    if (el) {
+      changeColor(el);
     }
   });
 }
