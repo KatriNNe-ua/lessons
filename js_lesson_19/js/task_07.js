@@ -23,8 +23,8 @@ class Snow {
     img.style.left = this.generationRandomNum(0, 100) + "%";
     img.style.top = 0 + "%";
   }
-  setWidth(img){
-	 img.style.width = this.generationRandomNum(20, 80) + "px";
+  setWidth(img) {
+    img.style.width = this.generationRandomNum(20, 80) + "px";
   }
   move(img) {
     const top = parseFloat(img.style.top);
@@ -37,7 +37,7 @@ class Snow {
       const img = this.getImgSnow();
       divImg.append(img);
       this.setStartCoordinates(divImg);
-	  this.setWidth(divImg);
+      this.setWidth(divImg);
       setInterval(() => {
         this.move(divImg);
         if (parseFloat(divImg.style.top) >= 100)
@@ -52,3 +52,8 @@ class Snow {
 const snow = new Snow("../img/snow.webp", 20);
 const selector = document.querySelector(".wrapper");
 snow.render(selector);
+
+setTimeout(() => {
+  const snow2 = new Snow("../img/snow.webp", 20);
+  snow2.render(selector);
+}, 2000);
