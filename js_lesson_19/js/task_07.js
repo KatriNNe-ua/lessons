@@ -6,7 +6,7 @@
 //  (top>maxTop) вона знову повинна з’явитись у верхній частині екрану (top=0).
 
 class Snow {
-  constructor(imgPath, count, time = 16) {
+  constructor(imgPath, count, time = 30) {
     this.imgPath = imgPath;
     this.count = count;
     this.time = time;
