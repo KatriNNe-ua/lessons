@@ -6,10 +6,9 @@
 //  (top>maxTop) вона знову повинна з’явитись у верхній частині екрану (top=0).
 
 class Snow {
-  constructor(imgPath, count, step = 0.5, time = 16) {
+  constructor(imgPath, count, time = 16) {
     this.imgPath = imgPath;
     this.count = count;
-    this.step = step;
     this.time = time;
   }
   getImgSnow() {
@@ -26,7 +25,7 @@ class Snow {
   }
   move(img) {
     const top = parseFloat(img.style.top);
-    img.style.top = top + this.generationRandomNum(0, this.step) + "%";
+    img.style.top = top + Math.random() + "%";
   }
   render(selector) {
     for (let i = 0; i < this.count; i++) {
@@ -46,6 +45,6 @@ class Snow {
     }
   }
 }
-const snow = new Snow("../img/snow.webp", 50);
+const snow = new Snow("../img/snow.webp", 20);
 const selector = document.querySelector(".wrapper");
 snow.render(selector);
