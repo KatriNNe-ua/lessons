@@ -49,11 +49,11 @@ class Snow {
     }
   }
 }
-const snow = new Snow("../img/snow.webp", 20);
+const snow = new Snow("img/snow.webp", 20);
 const selector = document.querySelector(".wrapper");
 snow.render(selector);
 
 setTimeout(() => {
-  const snow2 = new Snow("../img/snow.webp", 20);
+  const snow2 = new Snow("img/snow.webp", 20);
   snow2.render(selector);
 }, 2000);
