@@ -54,6 +54,9 @@ const selector = document.querySelector(".wrapper");
 snow.render(selector);
 
 setTimeout(() => {
-  const snow2 = new Snow("img/snow.webp", 20);
-  snow2.render(selector);
+  snow.render(selector);
 }, 2000);
+setTimeout(() => {
+  snow.render(selector);
+}, 4000);
+
