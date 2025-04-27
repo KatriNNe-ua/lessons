@@ -1,0 +1,31 @@
+.shopping-cart__cnt{
+	margin: 0 auto;
+}
+.filter-cnt {
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px;
+	border: 2px solid rgba(227, 213, 23, 0.4392156863);
+	min-height: 50px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	align-items: start;
+	select {
+		font-size: 20px;
+	}
+}
+.found-car {
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px;
+	border: 2px solid rgba(227, 213, 23, 0.4392156863);
+	min-height: 50px;
+
+}
+
+.car-item{
+text-align: left;
+}
