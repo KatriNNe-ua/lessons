@@ -3,13 +3,11 @@
 //Задача 3. Розробити Класи
 
 class Animal {
-  constructor(coordinateX, coordinateY, srcImg, cssObj, interval) {
+  constructor(coordinateX, coordinateY, srcImg, cssObj) {
     this.coordinateX = coordinateX;
     this.coordinateY = coordinateY;
     this.srcImg = srcImg;
     this.cssObj = cssObj;
-    this.interval = interval;
-    //this.divEl = null;
   }
   setPosition() {
     this.divEl.style.top = this.coordinateY + "%";
@@ -37,17 +35,17 @@ class Animal {
 }
 
 class House extends Animal {
-  renewal() {
+  renewal(interval=1000) {
     setInterval(() => {
       if (this.divEl.style.transform === "scale(1.2)")
         this.divEl.style.transform = "scale(1)";
       else this.divEl.style.transform = "scale(1.2)";
-    }, this.interval);
+    }, interval);
   }
 }
 
 class Dog extends Animal {
-  renewal(step = 5) {
+  renewal(step = 5, interval = 1000) {
     setInterval(() => {
       const dislocationX = this.getRandomNum(-step, step);
       const res = this.coordinateX + dislocationX;
@@ -56,12 +54,12 @@ class Dog extends Animal {
       else this.coordinateX -= dislocationX;
 
       this.setPosition();
-    }, this.interval);
+    },interval);
   }
 }
 
 class Bird extends Animal {
-  renewal(step = 5) {
+  renewal(step = 5, interval = 1000) {
     setInterval(() => {
       const dislocationX = this.getRandomNum(-step, step);
       const dislocationY = this.getRandomNum(-step, step);
@@ -77,7 +75,7 @@ class Bird extends Animal {
       else this.coordinateY -= dislocationY;
 
       this.setPosition();
-    }, this.interval);
+    },interval);
   }
 }
 
@@ -85,9 +83,9 @@ const cssObj = {
   img: "img",
 };
 
-const house = new House(20, 40, "img/house.png", cssObj, 1000);
-const dog = new Dog(40, 40, "img/dog.png", cssObj, 1000);
-const bird = new Bird(60, 30, "img/bird.png", cssObj, 1000);
+const house = new House(20, 40, "img/house.png", cssObj);
+const dog = new Dog(40, 40, "img/dog.png", cssObj);
+const bird = new Bird(60, 30, "img/bird.png", cssObj);
 
 const cnt = document.body;
 house.render(cnt);
