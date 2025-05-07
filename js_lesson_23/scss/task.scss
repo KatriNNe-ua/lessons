@@ -1,0 +1,137 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,600,700,800&display=swap");
+@import "_reset.scss";
+//REM
+@function toRem($px, $current: 16) {
+	$result: math.div($px, $current) + rem;
+	@return $result;
+}
+//EM
+@function toEm($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+:root {
+	--bgColor: rgb(33, 32, 32);
+	--colorText: rgb(254, 254, 254);
+}
+
+body {
+	font-family: "Manrope", sans-serif;
+	background-color: var(--bgColor);
+	color: var(--colorText);
+	font-size: toRem(25);
+	text-align: center;
+		line-height: 1.5;
+	letter-spacing: toRem(1);
+
+}
+
+[class*="__container"] {
+	max-width: toRem(1400);
+	margin-inline: auto;
+	padding-inline: toRem(15);
+}
+.task {
+	padding-block: toRem(50);
+	// .task__title
+	&__title {
+		font-size: toRem(40);
+		text-transform: uppercase;
+		letter-spacing: toRem(3);
+		font-weight: 600;
+		margin-bottom: toRem(40);
+	}
+	&__text{
+		border-bottom: toRem(1) solid #e3d617f4;
+			padding: toRem(40);
+			text-align: start;
+	}
+}
+button{
+	padding: toRem(20) toRem(40);
+	border: toRem(1) solid #e3d617f4;
+}
+
+.solution {
+	padding-bottom: 30px;
+		// .solution__container
+		&__container {
+			display: grid;
+			gap: 40px;
+		}
+		// .solution__item
+		&__item {
+			display: grid;
+			gap: 20px;
+		}
+		// .solution__text
+		&__text {
+		text-align: start;
+			font-size: 20px;
+			span{
+				color: #e3d617f4;
+			}
+		}
+		// .solution__answer
+		&__answer {
+			span{
+				display: inline-block;
+				width: 150px;
+				text-align: start;
+			}
+		}
+}
+
+
+.input-item{
+  display: grid;
+  max-width: 600px;
+  grid-template-columns: 1.5fr 0.5fr;
+  text-align: start;
+  gap: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+justify-items: end;
+margin: 0 auto;
+}
+
+.input-item input {
+  border: 1px solid rgba(227, 214, 23, 0.9568627451);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.input-item input:hover {
+  background-color: #2b2b2b;
+}
+
+.input-item:focus-visible {
+  background-color: #2b2b2b;
+  border: 1px solid rgba(227, 214, 23, 0.9568627451);
+  outline: 1px solid rgba(227, 214, 23, 0.9568627451);
+}
+
+.color{
+	margin-top: 30px;
+}
+
+.solution__initial, .solution__result{
+	display: flex;
+	margin: 0 auto;
+	gap: 10px;
+	max-width: 800px;
+	width: 100%;
+	p{
+		text-decoration: underline;
+		text-decoration-color:  rgba(227, 214, 23, 0.9568627451);
+		text-underline-offset: 5px;
+		min-width: 140px;
+		text-align: start;
+	}
+	span{
+	flex-grow: 1;
+	text-align: center;
+	}
+}

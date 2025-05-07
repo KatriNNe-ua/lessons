@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/task.css">
+
+	<title>Task 02</title>
+</head>
+
+<body>
+	<section class="task">
+		<div class="task__container">
+			<h1 class="task__title">Задачи на "регулярні вирази"</h1>
+			<div class="task__text">
+				<p>Користувач вводить кількість елементів. Створити масив, у якому перша половина заповнена 1-цями, а
+					друга
+					заповнена 7-ками.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="solution">
+		<div class="solution__container">
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 1.</span> Дано масив рядків. Вивести ті, у яких є цифри
+					(використати метод
+					test та регулярні вирази). </p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial1"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test1"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 2.</span>Дано масив рядків. Вивести ті, у яких немає цифр. </p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial2"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test2"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 3.</span>Дано масив рядків. Вивести ті, у яких є голосні літери.
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial3"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test3"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 4.</span> Дано масив рядків. Вивести ті, у яких немає голосних
+					літер.
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial4"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test4"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 5.</span> Дано масив рядків. Вивести ті, у яких є або цифра 1 або
+					цифра 3.
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial5"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test5"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 6.</span> Дано рядок тексту, вивести усі числа, які є у тексті.
+
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial6"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test6"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 7.</span> Дано рядок тексту. Знайти усі знаки пунктуації, які
+					були
+					використано.
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial7"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test7"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 8.</span> Дано рядок тексту. Вивести усі складові, які розділені
+					розділовими
+					знаками.
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial8"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test8"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 9.</span>Дано рядок тексту. Перевірити, чи містить він дату у
+					форматі
+					dd.mm.yyyy (dd- день, mm- місяць, yyyy- рік).
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial9"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test9"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 10.</span>Дано рядок тексту. Підрахувати кількість двоцифрових
+					чисел у
+					рядку.
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial10"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test10"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 11.</span>Визначити чи може бути рядок тексту номером банківської
+					картки
+					(приклад: «4142-3433-2323-3434»). Знайти усі такі номери.
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial11"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test11"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 12.</span>Дано адресу сайту. Визначити, чи є він урядовим
+					(містить домен
+					“gov”)
+
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial12"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test12"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 13.</span>Вибрати усі роки після 2021 року з отриманого
+					повідомлення
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial13"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test13"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 14.</span> Дано номер телефону. Перевірити, чи є цей телефон
+					телефоном з
+					України (починаєтсья на «+38»)
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial14"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test14"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 15.</span> Користувач вводить прізвище та ім’я в одному рядку
+					через пробіл.
+					Замінити пробіл на дефіс.
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial15"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test15"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 16.</span> Користувач вводить дату у форматі «день.місяць.рік».
+					Отримати
+					рядкове представлення дати у форматі «день/місяць/рік»
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial16"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test16"></span>
+				</div>
+			</div>
+			<div class="solution__item">
+				<p class="solution__text"><span>Задача 17.</span> Користувач вводить день (номер дня (0-6) або
+					«sun,mon,tue,wed,thu,fri,sat»). Визначити, чи є це день вихідним
+				</p>
+				<div class="solution__initial">
+					<p>Initial data:</p>
+					<span id="initial17"></span>
+				</div>
+				<div class="solution__result">
+					<p>Result:</p>
+					<span id="test17"></span>
+				</div>
+			</div>
+		</div>
+		</div>
+
+	</section>
+	<script src="js/task_02.js"> </script>
+</body>
+
+</html>
