@@ -334,7 +334,7 @@ function columnBuild() {
 //plan
 async function getPlans(activeType) {
   try {
-    const response = await fetch("../json/plans.json");
+    const response = await fetch("json/plans.json");
     if (!response.ok) throw new Error("Сервер не відповів");
     const data = await response.json();
 	plansShow(data, activeType);

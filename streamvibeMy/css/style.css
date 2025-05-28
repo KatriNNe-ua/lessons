@@ -946,7 +946,8 @@ body {
 .item-devices__icon img {
   width: 100%;
   height: 100%;
-  aspect-ratio: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .item-devices__title {
   color: var(--white-color);

@@ -226,7 +226,7 @@
 		img {
 			width: 100%;
 			height: 100%;
-			aspect-ratio: contain;
+			object-fit: contain;
 		}
 	}
 	// .item-devices__title
