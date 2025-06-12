@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Task 4</title>
+	<!-- React -->
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<!-- ReactDOM -->
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<!-- Babel для JSX -->
+	<script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+	<style>
+		*,
+		*::before,
+		*::after {
+			padding: 0;
+			margin: 0;
+			border: none;
+
+			box-sizing: border-box;
+		}
+
+		*::before,
+		*::after {
+			display: inline-block;
+		}
+
+		a {
+			text-decoration: none;
+			display: inline-block;
+			color: inherit;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		html,
+		body {
+			line-height: 1;
+			height: 100%;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: inherit;
+			font-size: inherit;
+		}
+
+		/* FORM */
+		input,
+		button,
+		textarea {
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit;
+			color: inherit;
+			background-color: transparent;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+		}
+
+		button,
+		select,
+		option {
+			cursor: pointer;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"],
+		textarea {
+			appearance: none;
+		}
+
+		/* =================================================== */
+		body {
+			font-family: "Manrope", sans-serif;
+			background-color: rgb(33, 32, 32);
+			color: rgb(254, 254, 254);
+			font-size: 25px;
+			text-align: center;
+			line-height: 1.5;
+			letter-spacing: 1px;
+		}
+
+		[class*="__container"] {
+			max-width: 1400px;
+			margin-inline: auto;
+			padding-inline: 15px;
+		}
+
+		.task {
+			padding-block: 50px;
+		}
+
+		.task__title {
+			font-size: 40px;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-weight: 600;
+			margin-bottom: 40px;
+		}
+
+		.task__text {
+			border-bottom: 1px solid #30c5f2f4;
+			padding: 40px;
+			font-size: 18px;
+			text-align: start;
+		}
+
+		.bank__container {
+			max-width: 650px;
+			padding-bottom: 10px;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+		.bank__item{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: center;
+			gap: 20px;
+		
+		}
+		label{
+			justify-self: end;
+		}
+
+
+
+		input {
+			margin-top: 10px;
+			border: 1px solid #30c5f2f4;
+
+			border-radius: 5px;
+			padding: 5px;
+			transition: all 0.3s;
+			max-width: 250px;
+			font-size: 18px;
+		}
+
+		input:hover {
+			background-color: #30c5f218;
+		}
+
+		input:focus-visible {
+			background-color: #30c5f218;
+			border: 1px solid #30c5f2f4;
+			outline: 1px solid #30c5f2f4;
+		}
+
+		button {
+			font-size: 18px;
+			padding: 15px 20px;
+			border: 1px solid #30c5f2f4;
+			border-radius: 10px;
+			background-color: #30c5f213;
+			text-transform: uppercase;
+			transition: all 0.3s;
+			grid-column: span 2;
+			margin-bottom: 10px;
+		}
+
+		button:hover {
+			background-color: #30c5f22b;
+
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root"></div>
+
+	<script type="text/babel">
+		function RenderTask(){
+			return (
+				<div className="task">
+					<div className="task__container">
+						<h1 className="task__title">Задача #4</h1>
+                         <div className="task__text">
+	                         <p>“Рахунок у банку” Вимоги:</p>
+							 <p>1. Спочатку сума дорівнює 0грн. Змінити суму у гривнях можна або зарахуванням на рахунок, або зняттям.</p>
+							 <p>2. Сума автоматично переводиться у долари та євро (фіксований курс задається у data).</p>
+							 <p>3. можливість зарахувати суму (контролювати, щоб не була від’ємною)</p>
+							 <p>4. можливість зняти (щоб не можна зняти більше ніж є на рахунку)</p>
+							<p>5. при виконанні зняття і зарахування коштів вираховувати 3% від суми (відображати кількість відсотків
+							 автоматично)</p>
+							 <p>При зміні суми: </p>
+							<p> - якщо було зняття, то суму відображати червоним </p>
+							<p> - якщо було зарахування, то суму відображати зеленим </p>
+							<p> Якщо сума валюти менша за 100 то відображати червоним кольором, інакше - зеленим </p>
+
+
+	                      </div>
+						</div>
+					</div>
+			)
+		}
+		
+		function RenderBankAccount({eurosRate, dollarsRate, rate}){
+			const[amount, setAmount] = React.useState(0)
+			const[userAmountAdd, setUserAmountAdd] = React.useState("")
+			const[userAmountWithdraw, setUserAmountWithdraw] = React.useState("")
+			const[tax, setTax] = React.useState(0)
+			const[styleColor, setStyleColor] = React.useState({amout:"green", currencyDollars: "red", currencyEuros: "red"})
+
+			const data ={
+				dollars: dollarsRate,
+				euros: eurosRate,
+			}
+			const amountDollars = amount/data.dollars
+			const amountEuros = amount/data.euros
+	
+			//===========================================
+			function handlerNumAdd(e){
+				const num = parseFloat(e.target.value)
+				setUserAmountAdd(num<0||isNaN(num)?"":num)
+			}
+			function handlerNumWithdraw(e){
+			const num = parseFloat(e.target.value)
+			setUserAmountWithdraw(num<0||isNaN(num)?"":num) 
+		    }
+			//==========================================
+			function chanchColorCurrency(newAmount){
+				if(newAmount/data.dollars<100) setStyleColor(prev=> ({...prev, currencyDollars: "red"}))
+				else setStyleColor(prev=> ({...prev, currencyDollars: "green"}))
+				if(newAmount/data.euros<100) setStyleColor(prev=> ({...prev, currencyEuros: "red"}))
+				else setStyleColor(prev=> ({...prev, currencyEuros: "green"}))
+			}
+
+			//===========================================
+			function addAmount(){
+				const taxAmount = userAmountAdd * rate / 100;
+				const newAmount = amount + userAmountAdd - taxAmount;
+				setAmount(prevAmount=>prevAmount+userAmountAdd-taxAmount)
+				setTax(taxAmount);
+				setUserAmountAdd("")
+				setStyleColor(prev=> ({...prev, amout:"green"}))
+				chanchColorCurrency(newAmount)
+
+			}
+			function withdrawAmount(){
+				const taxAmount = userAmountWithdraw * rate / 100;
+				
+				if(amount>=(userAmountWithdraw+taxAmount)){
+					const newAmount = amount - userAmountWithdraw - taxAmount;
+				setAmount(prevAmount=>prevAmount-userAmountWithdraw-taxAmount)
+				setTax(taxAmount);
+				setUserAmountWithdraw("")
+				setStyleColor(prev=> ({...prev, amout:"red"}))
+				chanchColorCurrency(newAmount)
+				}
+				}
+
+			return(
+				<div className="bank">
+					<div className="bank__container">
+						<div className="bank__amount">Сума на рахунку: <span
+								style={{color:`${styleColor.amout}`}}>{amount.toFixed(2)}</span> грн.</div>
+						<div className="bank__inputs">
+								<div className="bank__item">
+									<label htmlFor="add">Зарахувати на рахунок:</label>
+									<input type="number" value={userAmountAdd} id="add" onChange={handlerNumAdd} />
+									<button onClick={addAmount}>Зарахувати</button>
+								</div>
+								<div className="bank__item">
+									<label htmlFor="withdraw">Зняти з рахунку:</label>
+									<input type="number" value={userAmountWithdraw} id="withdraw" onChange={handlerNumWithdraw} />
+									<button onClick={withdrawAmount}>Зняти</button>
+								</div>
+						</div>
+						<div className="bank__rate">Відсотки за обслуговування: {tax.toFixed(2)} грн.</div>
+						<div className="bank__wrapper">
+							<div className="bank__dollars">Сума у доларах:
+								$<span style={{color:`${styleColor.currencyDollars}`}}>{amountDollars.toFixed(2)}</span>
+							</div>
+							<div className="bank__euros" >Сума у євро: €
+								<span style={{color:`${styleColor.currencyEuros}`}}>{amountEuros.toFixed(2)}</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			)
+		}
+
+		function App() {
+        return (
+				<React.Fragment>
+				<RenderTask />
+				<RenderBankAccount eurosRate={45} dollarsRate={48} rate={3} />
+
+				</React.Fragment>	
+		)
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('root'))
+      root.render(<App />)
+    </script>
+</body>
+
+</html>

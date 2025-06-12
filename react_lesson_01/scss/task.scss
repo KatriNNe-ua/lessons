@@ -1,0 +1,55 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,600,700,800&display=swap");
+@import "_reset.scss";
+//REM
+@function toRem($px, $current: 16) {
+	$result: math.div($px, $current) + rem;
+	@return $result;
+}
+//EM
+@function toEm($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+:root {
+	--bgColor: rgb(33, 32, 32);
+	--colorText: rgb(254, 254, 254);
+}
+
+body {
+	font-family: "Manrope", sans-serif;
+	background-color: var(--bgColor);
+	color: var(--colorText);
+	font-size: toRem(25);
+	text-align: center;
+		line-height: 1.5;
+	letter-spacing: toRem(1);
+}
+
+[class*="__container"] {
+	max-width: toRem(1400);
+	margin-inline: auto;
+	padding-inline: toRem(15);
+}
+.task {
+	padding-block: toRem(50);
+
+
+	// .task__title
+	&__title {
+		font-size: toRem(40);
+		text-transform: uppercase;
+		letter-spacing: toRem(3);
+		font-weight: 600;
+		margin-bottom: toRem(40);
+	}
+	&__text{
+		border-bottom: toRem(1) solid #e3d617f4;
+			padding: toRem(40);
+	}
+}
+button{
+	padding: toRem(20) toRem(40);
+	border: toRem(1) solid #e3d617f4;
+}
+

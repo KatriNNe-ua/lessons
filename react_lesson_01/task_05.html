@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Task 5</title>
+	<!-- React -->
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<!-- ReactDOM -->
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<!-- Babel для JSX -->
+	<script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+	<style>
+		*,
+		*::before,
+		*::after {
+			padding: 0;
+			margin: 0;
+			border: none;
+
+			box-sizing: border-box;
+		}
+
+		*::before,
+		*::after {
+			display: inline-block;
+		}
+
+		a {
+			text-decoration: none;
+			display: inline-block;
+			color: inherit;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		html,
+		body {
+			line-height: 1;
+			height: 100%;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: inherit;
+			font-size: inherit;
+		}
+
+		/* FORM */
+		input,
+		button,
+		textarea {
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit;
+			color: inherit;
+			background-color: transparent;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+		}
+
+		button,
+		select,
+		option {
+			cursor: pointer;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"],
+		textarea {
+			appearance: none;
+		}
+
+		/* =================================================== */
+		body {
+			font-family: "Manrope", sans-serif;
+			background-color: rgb(33, 32, 32);
+			color: rgb(254, 254, 254);
+			font-size: 25px;
+			text-align: center;
+			line-height: 1.5;
+			letter-spacing: 1px;
+		}
+
+		[class*="__container"] {
+			max-width: 1400px;
+			margin-inline: auto;
+			padding-inline: 15px;
+		}
+
+		.task {
+			padding-block: 50px;
+		}
+
+		.task__title {
+			font-size: 40px;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-weight: 600;
+			margin-bottom: 40px;
+		}
+
+		.task__text {
+			border-bottom: 1px solid #30c5f2f4;
+			padding: 40px;
+		}
+
+		.authorized__container {
+		max-width: 500px;
+		padding-bottom: 10px;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		}
+		.authorized__item{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 20px;
+
+		}
+
+		input {
+			margin-top: 10px;
+			border: 1px solid #30c5f2f4;
+
+			border-radius: 5px;
+			padding: 5px;
+			transition: all 0.3s;
+			max-width: 250px;
+			font-size: 18px;
+		}
+
+		input:hover {
+			background-color: #30c5f218;
+		}
+
+		input:focus-visible {
+			background-color: #30c5f218;
+			border: 1px solid #30c5f2f4;
+			outline: 1px solid #30c5f2f4;
+		}
+				button {
+				font-size: 18px;
+				padding: 15px 20px;
+				border: 1px solid #30c5f2f4;
+				border-radius: 10px;
+				background-color: #30c5f213;
+				text-transform: uppercase;
+				transition: all 0.3s;
+				grid-column: span 2;
+				margin-bottom: 10px;
+				}
+
+				button:hover {
+				background-color: #30c5f22b;
+
+				}
+
+
+	</style>
+</head>
+
+<body>
+	<div id="root"></div>
+
+	<script type="text/babel">
+		function RenderTask(){
+			return (
+				<div className="task">
+					<div className="task__container">
+						<h1 className="task__title">Задача #5</h1>
+                         <div className="task__text">
+	                         <p>Додаток містить масив об’єктів (логін, пароль) -- існуючі логіни і паролі. Користувач
+	                         	вводить логін і пароль, а програма при натисненні на кнопку повідомляє чи може користувач
+	                         	бути авторизованим.</p>
+
+	                      </div>
+						</div>
+					</div>
+			)
+		}
+        function AuthorizedUser({listАuthorized}){
+			const[userLogin, setUserLogin] = React.useState("")
+			const[userPassword, setUserPassword] = React.useState("")
+			const[message, setMessage] = React.useState("")
+			//============================================
+			function handlerLogin(e){
+			setUserLogin(e.target.value)
+			}
+			function handlerPassword(e){
+			setUserPassword(e.target.value)
+			}
+			function authorized(){
+				if(userLogin&&userPassword){
+				const coincidence = listАuthorized.find(user =>user.login === userLogin && user.password === userPassword);
+				if(coincidence){
+					setUserLogin("")
+					setUserPassword("")
+					setMessage("Ви авторизовані")
+				} 
+				else setMessage("Невірний логін або пароль")
+				} else setMessage("Поля повинні бути всі заповнені")
+			}
+			//===================================
+			return (
+				<div className="authorized">
+					<div className="authorized__container">
+						<div className="authorized__inputs">
+							<div className="authorized__item">
+								<label htmlFor="login">Login:</label>
+								<input value={userLogin} id="login" onChange={handlerLogin} />
+							</div>
+							<div className="authorized__item">
+								<label htmlFor="password">Password:</label>
+								<input value={userPassword} type="password" id="password" onChange={handlerPassword} />
+							</div>
+						</div>
+						<button onClick={authorized}>Авторизація</button>
+						<div className="authorized__info">{message}</div>
+					</div>
+				</div>
+				
+			)
+
+	    }
+
+		function App() {
+        return (
+				<React.Fragment>
+				<RenderTask />
+				<AuthorizedUser listАuthorized={[{login: "aaa", password: "123"}, {login: "bbb", password: "456"}]} />
+				</React.Fragment>	
+		)
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('root'))
+      root.render(<App />)
+    </script>
+</body>
+
+</html>

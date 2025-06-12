@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Task 3</title>
+	<!-- React -->
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<!-- ReactDOM -->
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<!-- Babel для JSX -->
+	<script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+	<style>
+		*,
+		*::before,
+		*::after {
+			padding: 0;
+			margin: 0;
+			border: none;
+
+			box-sizing: border-box;
+		}
+
+		*::before,
+		*::after {
+			display: inline-block;
+		}
+
+		a {
+			text-decoration: none;
+			display: inline-block;
+			color: inherit;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		html,
+		body {
+			line-height: 1;
+			height: 100%;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: inherit;
+			font-size: inherit;
+		}
+
+		/* FORM */
+		input,
+		button,
+		textarea {
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit;
+			color: inherit;
+			background-color: transparent;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+		}
+
+		button,
+		select,
+		option {
+			cursor: pointer;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"],
+		textarea {
+			appearance: none;
+		}
+
+		/* =================================================== */
+		body {
+			font-family: "Manrope", sans-serif;
+			background-color: rgb(33, 32, 32);
+			color: rgb(254, 254, 254);
+			font-size: 25px;
+			text-align: center;
+			line-height: 1.5;
+			letter-spacing: 1px;
+		}
+
+		[class*="__container"] {
+			max-width: 1400px;
+			margin-inline: auto;
+			padding-inline: 15px;
+		}
+
+		.task {
+			padding-block: 50px;
+		}
+
+		.task__title {
+			font-size: 40px;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-weight: 600;
+			margin-bottom: 40px;
+		}
+
+		.task__text {
+			border-bottom: 1px solid #30c5f2f4;
+			padding: 40px;
+		}
+
+		.generate__container {
+			max-width: 700px;
+			padding-bottom: 10px;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+
+
+		input {
+			margin-top: 10px;
+			border: 1px solid #30c5f2f4;
+
+			border-radius: 5px;
+			padding: 5px;
+			transition: all 0.3s;
+			max-width: 250px;
+			font-size: 18px;
+		}
+
+		input:hover {
+			background-color: #30c5f218;
+		}
+
+		input:focus-visible {
+			background-color: #30c5f218;
+			border: 1px solid #30c5f2f4;
+			outline: 1px solid #30c5f2f4;
+		}
+
+		.generate__item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		button {
+			padding: 20px 40px;
+			border: 1px solid #30c5f2f4;
+			border-radius: 10px;
+			background-color: #30c5f213;
+			text-transform: uppercase;
+			transition: all 0.3s;
+		}
+
+		button:hover {
+			background-color: #30c5f22b;
+
+		}
+
+		.generate__random-num {
+			color: #30c5f2f4;
+			font-size: 48px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root"></div>
+
+	<script type="text/babel">
+		function RenderTask(){
+			return (
+				<div className="task">
+					<div className="task__container">
+						<h1 className="task__title">Задача #3</h1>
+                         <div className="task__text">
+	                         <p>Задано початок та кінець діапазону. При натисканні на кнопку випадковим чином генерувати
+	                         	значення з вказаного діапазону та відображати його.</p>
+	                      </div>
+						</div>
+					</div>
+			)
+		}
+		function GenerateRandomNum(){
+			const[minNum, setMinNum] = React.useState('')
+			const[maxNum, setMaxNum] = React.useState('')
+			const[getNum, setGetNum] = React.useState('')
+			//=============================================
+			function handlerMinNumber(e){
+				setMinNum(e.target.value)
+			}
+			function handlerMaxNumber(e){
+				setMaxNum(e.target.value)
+			}
+			//=============================================
+			function generateNum(){
+				let min = parseInt(minNum)
+				let max = parseInt(maxNum)
+				if( !isNaN(min)&&!isNaN(max)){					
+						if(min > max){
+						[min, max] = [max, min]
+						}
+						setGetNum(min +Math.floor(Math.random()*(max - min + 1)))
+				} else setGetNum("Введіть обидва числа")
+				
+			}
+
+			//=============================================
+			return(
+				<div className="generate">
+					<div className="generate__container">
+						<div className="generate__inputs">
+								<div className="generate__item">
+									<label htmlFor="min-num">Введіть початок діапазону:</label>
+									<input type="number" value={minNum} id="min-num" onChange={handlerMinNumber} />
+								</div>
+								<div className="generate__item">
+									<label htmlFor="max-num">Введіть кінець діапазону:</label>
+									<input type="number" value={maxNum} id="max-num" onChange={handlerMaxNumber} />
+								</div>
+						</div>
+						<button onClick={generateNum}>Cгенерувати
+							значення</button>
+						<div className="generate__random-num">{getNum}</div>
+					</div>
+				</div>
+			)
+
+		}
+     
+
+		function App() {
+        return (
+				<React.Fragment>
+				<RenderTask />
+				<GenerateRandomNum />
+
+				</React.Fragment>	
+		)
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('root'))
+      root.render(<App />)
+    </script>
+</body>
+
+</html>
