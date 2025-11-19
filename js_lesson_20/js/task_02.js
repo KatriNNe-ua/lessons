@@ -93,10 +93,11 @@ function startGame(num) {
 
 window.addEventListener("message", (event) => {
   //  if (event.origin !== "http://") return;
-  count = parseInt(event.data.num);
+   let num = parseInt(event.data.num);
    if (!isNaN(num)) {
      startGame(num); 
    }
 });
+
 
 
