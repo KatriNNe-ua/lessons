@@ -82,20 +82,21 @@ const cssObj = {
 //   tank.render(cnt);
 // }
 //========================================================
-let count
-window.addEventListener("message", (event) => {
-//  if (event.origin !== "http://your-domain.com") return;
-
-  count = parseInt(event.data.num)
-});
-
-
 const cnt = document.querySelector(".wrapper");
-for (let i = 0; i < count; i++) {
-  const tank = new Tank(10, 1000, listImg, cssObj);
-  tank.render(cnt);
+function startGame(num) {
+  for (let i = 0; i < num; i++) {
+    const tank = new Tank(10, 1000, listImg, cssObj);
+    tank.render(cnt);
+  }
+  window.parent.postMessage({ text: `Destroy ${num} tanks. Good luck!` }, "*");
 }
 
+window.addEventListener("message", (event) => {
+  //  if (event.origin !== "http://") return;
+  count = parseInt(event.data.num);
+   if (!isNaN(num)) {
+     startGame(num); 
+   }
+});
 
-  window.parent.postMessage({ text: "Good luck" }, "*");
 
