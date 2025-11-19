@@ -76,8 +76,26 @@ const cssObj = {
   cntImg: "game",
 };
 
+// const cnt = document.querySelector(".wrapper");
+// for (let i = 0; i < 10; i++) {
+//   const tank = new Tank(10, 1000, listImg, cssObj);
+//   tank.render(cnt);
+// }
+//========================================================
+let count
+window.addEventListener("message", (event) => {
+//  if (event.origin !== "http://your-domain.com") return;
+
+  count = parseInt(event.data.num)
+});
+
+
 const cnt = document.querySelector(".wrapper");
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < count; i++) {
   const tank = new Tank(10, 1000, listImg, cssObj);
   tank.render(cnt);
 }
+
+
+  window.parent.postMessage({ text: "Good luck" }, "*");
+
