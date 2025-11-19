@@ -95,9 +95,11 @@ window.addEventListener("message", (event) => {
   //  if (event.origin !== "http://") return;
    let num = parseInt(event.data.num);
    if (!isNaN(num)) {
+     cnt.innerHTML = "";   
      startGame(num); 
    }
 });
+
 
 
 
